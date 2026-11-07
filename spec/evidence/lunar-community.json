@@ -1,0 +1,71 @@
+{
+  "accessedAt": "2026-11-07",
+  "repository": "https://github.com/Lunar-Mapping-Project/mappings",
+  "commit": "4b1258c5fbe63fb818b364302e3d252ddbf42f5b",
+  "tree": {
+    "url": "https://api.github.com/repos/Lunar-Mapping-Project/mappings/git/trees/main?recursive=1",
+    "truncated": false,
+    "entries": 5064
+  },
+  "license": "MIT",
+  "examples": [
+    {
+      "path": "com/moonsworth/lunar/bridge/client/MinecraftBridge.mapping",
+      "url": "https://github.com/Lunar-Mapping-Project/mappings/blob/4b1258c5fbe63fb818b364302e3d252ddbf42f5b/com/moonsworth/lunar/bridge/client/MinecraftBridge.mapping",
+      "sha": "f8fceaede21c388c095f03830ae5b20e19a3d013"
+    },
+    {
+      "path": "com/moonsworth/lunar/bridge/client/entity/EntityPlayerSPBridge.mapping",
+      "url": "https://github.com/Lunar-Mapping-Project/mappings/blob/4b1258c5fbe63fb818b364302e3d252ddbf42f5b/com/moonsworth/lunar/bridge/client/entity/EntityPlayerSPBridge.mapping",
+      "sha": "f013bf00a93d759dad7cfb14c0cf21f5977ec9a5"
+    }
+  ],
+  "releases": [
+    {
+      "tag": "genesis/2.22.25-2632",
+      "publishedAt": "2026-08-04T00:04:46Z",
+      "url": "https://github.com/Lunar-Mapping-Project/mappings/releases/tag/genesis/2.22.25-2632",
+      "description": "![Banner for Lunar Mappings Project](https://user-images.githubusercontent.com/66835910/231187089-c2c4c435-3aea-4b20-9e71-eb8814053ce2.png)\r\n\r\nIncluded in this release, are mappings for:\r\n- `genesis-0.1.0-SNAPSHOT-all.jar` (`6c2f575f5a32b3940de5c4fedd2e7b9520c6f0cf`) ([Download](https://offline.lunarclientcdn.com/genesis-0.1.0-SNAPSHOT-all.jar/6c2f575f5a32b3940de5c4fedd2e7b9520c6f0cf))",
+      "files": [
+        {
+          "name": "mappings.tiny",
+          "url": "https://github.com/Lunar-Mapping-Project/mappings/releases/download/genesis/2.22.25-2632/mappings.tiny",
+          "bytes": 7298397
+        }
+      ]
+    },
+    {
+      "tag": "a397868",
+      "publishedAt": "2022-12-18T23:39:13Z",
+      "url": "https://github.com/Lunar-Mapping-Project/mappings/releases/tag/a397868",
+      "description": "JAR CDN file hash: `56b65a5e24e521d47ea44d07eee75922c9fcc2c0`  ([Download](https://offline.lunarclientcdn.com/lunar.jar/56b65a5e24e521d47ea44d07eee75922c9fcc2c0))\r\n\r\nMapping Format: `Tiny V2`",
+      "files": [
+        {
+          "name": "mappings.tiny",
+          "url": "https://github.com/Lunar-Mapping-Project/mappings/releases/download/a397868/mappings.tiny",
+          "bytes": 1609402
+        }
+      ]
+    },
+    {
+      "tag": "93d4dd4/master",
+      "publishedAt": "2023-04-08T19:39:06Z",
+      "url": "https://github.com/Lunar-Mapping-Project/mappings/releases/tag/93d4dd4/master",
+      "description": "![image](https://user-images.githubusercontent.com/66835910/230739722-90e65102-1929-4ecb-87ad-dab548c72876.png)\r\n\r\nIncluded in this release, are mappings for:\r\n- `lunar.jar` (`9e877cb3d7c74d4bd8d450d496cd179d1d93414b`) ([Download](https://offline.lunarclientcdn.com/lunar.jar/9e877cb3d7c74d4bd8d450d496cd179d1d93414b))\r\n- `common-0.1.0-SNAPSHOT-all.jar` (`76e676f70b2feb07f46cb1278b60fdddf254e661`) ([Download](https://offline.lunarclientcdn.com/common-0.1.0-SNAPSHOT-all.jar/76e676f70b2feb07f46cb1278b60fdddf254e661))\r\n- `genesis-0.1.0-SNAPSHOT-all.jar` (`fc4e259a7264e582dc0479dac42c00a54cc80919`) ([Download](https://offline.lunarclientcdn.com/genesis-0.1.0-SNAPSHOT-all.jar/fc4e259a7264e582dc0479dac42c00a54cc80919))\r\n- `modern-0.1.0-SNAPSHOT-all.jar` (`4ef3010c7f3b6c2bd6d91b8c724a72155f573f17`) ([Download](https://offline.lunarclientcdn.com/modern-0.1.0-SNAPSHOT-all.jar/4ef3010c7f3b6c2bd6d91b8c724a72155f573f17))\r\n- `v1_7-0.1.0-SNAPSHOT-all.jar` (`d8e43896d71fd7d2abf5ca9e5c7ab2857d68fda1`) ([Download](https://offline.lunarclientcdn.com/v1_7-0.1.0-SNAPSHOT-all.jar/d8e43896d71fd7d2abf5ca9e5c7ab2857d68fda1))\r\n- `v1_8-0.1.0-SNAPSHOT-all.jar` (`2033a601b876dffe2dc373d17fb5a228a9940ef1`) ([Download](https://offline.lunarclientcdn.com/v1_8-0.1.0-SNAPSHOT-all.jar/2033a601b876dffe2dc373d17fb5a228a9940ef1))\r\n- `v1_12-0.1.0-SNAPSHOT-all.jar` (`e800ba44a4cc245b77211525ecd9545000e994a0`) ([Download](https://offline.lunarclientcdn.com/v1_12-0.1.0-SNAPSHOT-all.jar/e800ba44a4cc245b77211525ecd9545000e994a0))\r\n\r\n",
+      "files": [
+        {
+          "name": "sacred-mappings.tiny",
+          "url": "https://github.com/Lunar-Mapping-Project/mappings/releases/download/93d4dd4/master/sacred-mappings.tiny",
+          "bytes": 7449455
+        }
+      ]
+    }
+  ],
+  "unknowncheats": {
+    "url": "https://www.unknowncheats.me/forum/minecraft/578628-lunar-mappings.html",
+    "http": 403,
+    "title": "Just a moment...",
+    "contentRead": false
+  },
+  "limitation": "The release descriptions and examples do not specify coverage by Minecraft 1.21.x version and loader. The released mapping files have not been imported or tested."
+}

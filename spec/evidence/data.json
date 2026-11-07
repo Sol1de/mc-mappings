@@ -1,0 +1,1031 @@
+{
+  "referenceDate": "2026-11-07",
+  "sources": [
+    {
+      "url": "https://piston-meta.mojang.com/mc/game/version_manifest_v2.json",
+      "accessedAt": "2026-11-07T13:52:42.468Z",
+      "responseSha256": "0fcdf26b9cfeececdffee692ffd7dbfc4306c7260d1ab6c17de3798dfc64c2c4"
+    },
+    {
+      "url": "https://maven.minecraftforge.net/net/minecraftforge/forge/maven-metadata.xml",
+      "accessedAt": "2026-11-07T13:52:42.955Z",
+      "responseSha256": "cbc1accd281218828cc4866d01bb5ef9b2fd1a7243a3400220f9844c8c552d92"
+    },
+    {
+      "url": "https://piston-meta.mojang.com/v1/packages/82ba6501da174a665c1787775f946487422f2432/1.21.1.json",
+      "accessedAt": "2026-11-07T13:52:42.978Z",
+      "responseSha256": "3636c26c20f1f0b7472ebef1a624ba1a6a2c4b003858c13224929898b5321437"
+    },
+    {
+      "url": "https://piston-meta.mojang.com/v1/packages/35f8a9bc4874e2c95e51b3ad21e043a33776f7c2/1.21.11.json",
+      "accessedAt": "2026-11-07T13:52:42.979Z",
+      "responseSha256": "cc717c0d11f2447690a13069401368969671a90d0503d2848b9e4438ae82d866"
+    },
+    {
+      "url": "https://piston-meta.mojang.com/v1/packages/b0dc919ace9cee9a91d5a6dcaa594d41a26fcb1b/1.21.10.json",
+      "accessedAt": "2026-11-07T13:52:42.980Z",
+      "responseSha256": "aeb4eb146190122dec966a9bba00eb16b7c415fc5348affc5e3f494c24002abd"
+    },
+    {
+      "url": "https://piston-meta.mojang.com/v1/packages/f7840475dae7c9ca4968b8198055db8d708a162d/1.21.json",
+      "accessedAt": "2026-11-07T13:52:42.983Z",
+      "responseSha256": "9d1cb54bcb68a63137c563dea3e451a1184c74917374bb54e30b4f659a1f26bf"
+    },
+    {
+      "url": "https://piston-meta.mojang.com/v1/packages/5941d98532ff0c7de72bd3f514d226d66977b7f0/1.21.2.json",
+      "accessedAt": "2026-11-07T13:52:42.984Z",
+      "responseSha256": "7e5477d6b6543b84e3e9d1f40526d214eb76314a076adcef31a8928a6d765116"
+    },
+    {
+      "url": "https://piston-meta.mojang.com/v1/packages/5ca2012338100e4dbfef0d2114a5fa66959ab1e5/1.21.5.json",
+      "accessedAt": "2026-11-07T13:52:42.985Z",
+      "responseSha256": "ea7ff2dbea92fba08b1a7d15412d912d9bcac68c610fe968882c512a8e934196"
+    },
+    {
+      "url": "https://piston-meta.mojang.com/v1/packages/4eb09bebca2356f7505e45544087d3109e8ce0e3/1.21.6.json",
+      "accessedAt": "2026-11-07T13:52:42.985Z",
+      "responseSha256": "54430494f932b1bf9c7129ee6964e1ce43d8bcb2e1c501d25be99a303143648f"
+    },
+    {
+      "url": "https://piston-meta.mojang.com/v1/packages/17db9704e95a73d53452f07a9b472e428288defa/1.21.8.json",
+      "accessedAt": "2026-11-07T13:52:42.986Z",
+      "responseSha256": "5723a5d3ba121b44ea4e41d91e76494fc86ce83823d5cd89f28187ed99925dfa"
+    },
+    {
+      "url": "https://piston-meta.mojang.com/v1/packages/811c9cc308cd5b928defa6434a7975233eaa6184/1.21.9.json",
+      "accessedAt": "2026-11-07T13:52:42.987Z",
+      "responseSha256": "c15f22ecd953e09dd6f55792d7af59efa9cb0c997ee13d5cca7b91a8bfa21e66"
+    },
+    {
+      "url": "https://piston-meta.mojang.com/v1/packages/5fa4228474e3d59b829637553262b6c06c0a38cf/1.21.3.json",
+      "accessedAt": "2026-11-07T13:52:42.988Z",
+      "responseSha256": "3d6af0fcf3a5a2c406c911896cc6a640f824721ac9ff1bc287ef82f4b12d4b14"
+    },
+    {
+      "url": "https://piston-meta.mojang.com/v1/packages/2e024c9834568a872f8c009a97b29d8d7381d00a/1.21.4.json",
+      "accessedAt": "2026-11-07T13:52:42.989Z",
+      "responseSha256": "110a9db5df120e614728e248ee0d705af07438d1de1d261bc7c3c85d17cf8e12"
+    },
+    {
+      "url": "https://piston-meta.mojang.com/v1/packages/1b478ff245de95b05e3c1a1589f391ade22e1bd3/1.21.7.json",
+      "accessedAt": "2026-11-07T13:52:42.991Z",
+      "responseSha256": "cd75ad0ef961f490aa967d61ffb2117d9c84bbf302e6e01e9adaa66b6ee57442"
+    },
+    {
+      "url": "https://meta.fabricmc.net/v2/versions/loader/1.21.11",
+      "accessedAt": "2026-11-07T13:52:43.032Z",
+      "responseSha256": "f6abfb193560672299551c56b7a1189c0ce1afba28c0ca5ee3ce06ed5fc7ebfb"
+    },
+    {
+      "url": "https://meta.fabricmc.net/v2/versions/loader/1.21.10",
+      "accessedAt": "2026-11-07T13:52:43.047Z",
+      "responseSha256": "a0eeb3774db8b1d1b6427bd5444927772d2a77b012f1fa99a22becebf0adf3e5"
+    },
+    {
+      "url": "https://meta.fabricmc.net/v2/versions/loader/1.21",
+      "accessedAt": "2026-11-07T13:52:43.048Z",
+      "responseSha256": "5fd368dfaead4496eda0d08d3d87bd636fec993d5a84d8dba473a99771426a43"
+    },
+    {
+      "url": "https://meta.fabricmc.net/v2/versions/loader/1.21.5",
+      "accessedAt": "2026-11-07T13:52:43.050Z",
+      "responseSha256": "ec6788b79853b8944970ee181799c90254fef53f45d92362393db8cc7ba67d56"
+    },
+    {
+      "url": "https://meta.fabricmc.net/v2/versions/loader/1.21.6",
+      "accessedAt": "2026-11-07T13:52:43.052Z",
+      "responseSha256": "685b866974e46cd7cfac1cc8e4ec5ad37b05455af23aa7a53198bbff187952b8"
+    },
+    {
+      "url": "https://meta.fabricmc.net/v2/versions/loader/1.21.2",
+      "accessedAt": "2026-11-07T13:52:43.054Z",
+      "responseSha256": "1df403e60c480e04bd3bf01d709b2a0b0755d823a1a3ac8ebceb1cb8e8e302dc"
+    },
+    {
+      "url": "https://meta.fabricmc.net/v2/versions/loader/1.21.8",
+      "accessedAt": "2026-11-07T13:52:43.058Z",
+      "responseSha256": "7f3319c4c28169dc6c983254e872e4c4be11d236586e7d3cd5169aceae274ddb"
+    },
+    {
+      "url": "https://meta.fabricmc.net/v2/versions/loader/1.21.7",
+      "accessedAt": "2026-11-07T13:52:43.061Z",
+      "responseSha256": "b89700985fd24bbbdeb0cc36457e0dbbef7aabb42773217db5aecf1244849358"
+    },
+    {
+      "url": "https://meta.fabricmc.net/v2/versions/loader/1.21.4",
+      "accessedAt": "2026-11-07T13:52:43.064Z",
+      "responseSha256": "2d5bcff81c41ef6cc98eac1b3901e7b947578ea81cca96e8b5836e57b8b3aaf1"
+    },
+    {
+      "url": "https://meta.fabricmc.net/v2/versions/loader/1.21.9",
+      "accessedAt": "2026-11-07T13:52:43.065Z",
+      "responseSha256": "2f23529aa6de5698cf9679c1329310b1656197599f60d2a9fc9a8f6b64120d30"
+    },
+    {
+      "url": "https://meta.fabricmc.net/v2/versions/loader/1.21.3",
+      "accessedAt": "2026-11-07T13:52:43.067Z",
+      "responseSha256": "21f1b1f0feb9b8d20ca92d7543f6aa447d299bf0f573cffd8bc8547870cf4bf4"
+    },
+    {
+      "url": "https://meta.fabricmc.net/v2/versions/loader/1.21.1",
+      "accessedAt": "2026-11-07T13:52:43.068Z",
+      "responseSha256": "ede2162d9b323d55d95572f20c33bf757ceedeb2c4ecd54366157f841a99fbb6"
+    },
+    {
+      "url": "https://api.lunarclientprod.com/launcher/metadata?launcher_version=3.7.32",
+      "accessedAt": "2026-11-07T13:52:43.189Z",
+      "responseSha256": "c7e60e51cb24944fb1367d2b5860b18d9af1a303e51c2dad238f14bb1fef77bf"
+    }
+  ],
+  "versions": [
+    {
+      "id": "1.21",
+      "releaseTime": "2024-06-13T08:24:03+00:00",
+      "manifest": "https://piston-meta.mojang.com/v1/packages/f7840475dae7c9ca4968b8198055db8d708a162d/1.21.json",
+      "manifestSha1": "f7840475dae7c9ca4968b8198055db8d708a162d",
+      "java": {
+        "component": "java-runtime-delta",
+        "majorVersion": 21
+      },
+      "client": {
+        "sha1": "0e9a07b9bb3390602f977073aa12884a4ce12431",
+        "size": 26836080,
+        "url": "https://piston-data.mojang.com/v1/objects/0e9a07b9bb3390602f977073aa12884a4ce12431/client.jar"
+      },
+      "mappings": {
+        "sha1": "0530a206839eb1e9b35ec86acbbe394b07a2d9fb",
+        "size": 9597156,
+        "url": "https://piston-data.mojang.com/v1/objects/0530a206839eb1e9b35ec86acbbe394b07a2d9fb/client.txt"
+      },
+      "fabric": {
+        "source": "https://meta.fabricmc.net/v2/versions/loader/1.21",
+        "loader": {
+          "separator": ".",
+          "build": 1,
+          "maven": "net.fabricmc:fabric-loader:0.20.1",
+          "version": "0.20.1",
+          "stable": true
+        },
+        "intermediary": {
+          "maven": "net.fabricmc:intermediary:1.21",
+          "version": "1.21",
+          "stable": true
+        }
+      },
+      "forge": {
+        "source": "https://maven.minecraftforge.net/net/minecraftforge/forge/maven-metadata.xml",
+        "count": 25,
+        "reference": "1.21-51.0.33",
+        "publications": [
+          "1.21-51.0.33",
+          "1.21-51.0.32",
+          "1.21-51.0.31",
+          "1.21-51.0.30",
+          "1.21-51.0.29",
+          "1.21-51.0.28",
+          "1.21-51.0.26",
+          "1.21-51.0.25",
+          "1.21-51.0.24",
+          "1.21-51.0.23",
+          "1.21-51.0.22",
+          "1.21-51.0.21",
+          "1.21-51.0.18",
+          "1.21-51.0.17",
+          "1.21-51.0.16",
+          "1.21-51.0.15",
+          "1.21-51.0.13",
+          "1.21-51.0.8",
+          "1.21-51.0.7",
+          "1.21-51.0.6",
+          "1.21-51.0.5",
+          "1.21-51.0.4",
+          "1.21-51.0.3",
+          "1.21-51.0.1",
+          "1.21-51.0.0"
+        ]
+      }
+    },
+    {
+      "id": "1.21.1",
+      "releaseTime": "2024-08-08T12:24:45+00:00",
+      "manifest": "https://piston-meta.mojang.com/v1/packages/82ba6501da174a665c1787775f946487422f2432/1.21.1.json",
+      "manifestSha1": "82ba6501da174a665c1787775f946487422f2432",
+      "java": {
+        "component": "java-runtime-delta",
+        "majorVersion": 21
+      },
+      "client": {
+        "sha1": "30c73b1c5da787909b2f73340419fdf13b9def88",
+        "size": 26836906,
+        "url": "https://piston-data.mojang.com/v1/objects/30c73b1c5da787909b2f73340419fdf13b9def88/client.jar"
+      },
+      "mappings": {
+        "sha1": "2244b6f072256667bcd9a73df124d6c58de77992",
+        "size": 9598610,
+        "url": "https://piston-data.mojang.com/v1/objects/2244b6f072256667bcd9a73df124d6c58de77992/client.txt"
+      },
+      "fabric": {
+        "source": "https://meta.fabricmc.net/v2/versions/loader/1.21.1",
+        "loader": {
+          "separator": ".",
+          "build": 1,
+          "maven": "net.fabricmc:fabric-loader:0.20.1",
+          "version": "0.20.1",
+          "stable": true
+        },
+        "intermediary": {
+          "maven": "net.fabricmc:intermediary:1.21.1",
+          "version": "1.21.1",
+          "stable": true
+        }
+      },
+      "forge": {
+        "source": "https://maven.minecraftforge.net/net/minecraftforge/forge/maven-metadata.xml",
+        "count": 70,
+        "reference": "1.21.1-52.1.21",
+        "publications": [
+          "1.21.1-52.1.2",
+          "1.21.1-52.1.1",
+          "1.21.1-52.1.0",
+          "1.21.1-52.0.57",
+          "1.21.1-52.0.56",
+          "1.21.1-52.0.53",
+          "1.21.1-52.0.52",
+          "1.21.1-52.0.51",
+          "1.21.1-52.0.50",
+          "1.21.1-52.0.49",
+          "1.21.1-52.0.48",
+          "1.21.1-52.0.47",
+          "1.21.1-52.0.45",
+          "1.21.1-52.0.42",
+          "1.21.1-52.0.40",
+          "1.21.1-52.0.39",
+          "1.21.1-52.0.38",
+          "1.21.1-52.0.37",
+          "1.21.1-52.0.36",
+          "1.21.1-52.0.35",
+          "1.21.1-52.0.34",
+          "1.21.1-52.0.33",
+          "1.21.1-52.0.32",
+          "1.21.1-52.0.30",
+          "1.21.1-52.0.29",
+          "1.21.1-52.0.28",
+          "1.21.1-52.0.27",
+          "1.21.1-52.0.26",
+          "1.21.1-52.0.25",
+          "1.21.1-52.0.24",
+          "1.21.1-52.0.23",
+          "1.21.1-52.0.22",
+          "1.21.1-52.0.21",
+          "1.21.1-52.0.20",
+          "1.21.1-52.0.19",
+          "1.21.1-52.0.18",
+          "1.21.1-52.0.17",
+          "1.21.1-52.0.16",
+          "1.21.1-52.0.15",
+          "1.21.1-52.0.13",
+          "1.21.1-52.0.12",
+          "1.21.1-52.0.11",
+          "1.21.1-52.0.10",
+          "1.21.1-52.0.9",
+          "1.21.1-52.0.8",
+          "1.21.1-52.0.7",
+          "1.21.1-52.0.6",
+          "1.21.1-52.0.5",
+          "1.21.1-52.0.4",
+          "1.21.1-52.0.3",
+          "1.21.1-52.0.2",
+          "1.21.1-52.0.1",
+          "1.21.1-52.0.0",
+          "1.21.1-52.1.3",
+          "1.21.1-52.1.4",
+          "1.21.1-52.1.5",
+          "1.21.1-52.1.6",
+          "1.21.1-52.1.7",
+          "1.21.1-52.1.8",
+          "1.21.1-52.1.9",
+          "1.21.1-52.1.10",
+          "1.21.1-52.1.12",
+          "1.21.1-52.1.13",
+          "1.21.1-52.1.14",
+          "1.21.1-52.1.15",
+          "1.21.1-52.1.16",
+          "1.21.1-52.1.18",
+          "1.21.1-52.1.19",
+          "1.21.1-52.1.20",
+          "1.21.1-52.1.21"
+        ]
+      }
+    },
+    {
+      "id": "1.21.2",
+      "releaseTime": "2024-10-22T09:58:55+00:00",
+      "manifest": "https://piston-meta.mojang.com/v1/packages/5941d98532ff0c7de72bd3f514d226d66977b7f0/1.21.2.json",
+      "manifestSha1": "5941d98532ff0c7de72bd3f514d226d66977b7f0",
+      "java": {
+        "component": "java-runtime-delta",
+        "majorVersion": 21
+      },
+      "client": {
+        "sha1": "c7ac2d0d86f4ca416cab9064ff8a281852ad0c7b",
+        "size": 27842947,
+        "url": "https://piston-data.mojang.com/v1/objects/c7ac2d0d86f4ca416cab9064ff8a281852ad0c7b/client.jar"
+      },
+      "mappings": {
+        "sha1": "ce0ed2eb99175df9ec5166324e3fdd1f87cee827",
+        "size": 10178587,
+        "url": "https://piston-data.mojang.com/v1/objects/ce0ed2eb99175df9ec5166324e3fdd1f87cee827/client.txt"
+      },
+      "fabric": {
+        "source": "https://meta.fabricmc.net/v2/versions/loader/1.21.2",
+        "loader": {
+          "separator": ".",
+          "build": 1,
+          "maven": "net.fabricmc:fabric-loader:0.20.1",
+          "version": "0.20.1",
+          "stable": true
+        },
+        "intermediary": {
+          "maven": "net.fabricmc:intermediary:1.21.2",
+          "version": "1.21.2",
+          "stable": true
+        }
+      },
+      "forge": {
+        "source": "https://maven.minecraftforge.net/net/minecraftforge/forge/maven-metadata.xml",
+        "count": 0,
+        "reference": null,
+        "publications": []
+      }
+    },
+    {
+      "id": "1.21.3",
+      "releaseTime": "2024-10-23T12:28:15+00:00",
+      "manifest": "https://piston-meta.mojang.com/v1/packages/5fa4228474e3d59b829637553262b6c06c0a38cf/1.21.3.json",
+      "manifestSha1": "5fa4228474e3d59b829637553262b6c06c0a38cf",
+      "java": {
+        "component": "java-runtime-delta",
+        "majorVersion": 21
+      },
+      "client": {
+        "sha1": "6f67d19b4467240639cb2c368ffd4b94ba889705",
+        "size": 27844259,
+        "url": "https://piston-data.mojang.com/v1/objects/6f67d19b4467240639cb2c368ffd4b94ba889705/client.jar"
+      },
+      "mappings": {
+        "sha1": "42c2292dfc21de314dee5205760332c807cad411",
+        "size": 10178949,
+        "url": "https://piston-data.mojang.com/v1/objects/42c2292dfc21de314dee5205760332c807cad411/client.txt"
+      },
+      "fabric": {
+        "source": "https://meta.fabricmc.net/v2/versions/loader/1.21.3",
+        "loader": {
+          "separator": ".",
+          "build": 1,
+          "maven": "net.fabricmc:fabric-loader:0.20.1",
+          "version": "0.20.1",
+          "stable": true
+        },
+        "intermediary": {
+          "maven": "net.fabricmc:intermediary:1.21.3",
+          "version": "1.21.3",
+          "stable": true
+        }
+      },
+      "forge": {
+        "source": "https://maven.minecraftforge.net/net/minecraftforge/forge/maven-metadata.xml",
+        "count": 57,
+        "reference": "1.21.3-53.1.16",
+        "publications": [
+          "1.21.3-53.1.2",
+          "1.21.3-53.1.1",
+          "1.21.3-53.1.0",
+          "1.21.3-53.0.55",
+          "1.21.3-53.0.53",
+          "1.21.3-53.0.52",
+          "1.21.3-53.0.51",
+          "1.21.3-53.0.49",
+          "1.21.3-53.0.48",
+          "1.21.3-53.0.47",
+          "1.21.3-53.0.45",
+          "1.21.3-53.0.44",
+          "1.21.3-53.0.42",
+          "1.21.3-53.0.39",
+          "1.21.3-53.0.37",
+          "1.21.3-53.0.36",
+          "1.21.3-53.0.35",
+          "1.21.3-53.0.34",
+          "1.21.3-53.0.33",
+          "1.21.3-53.0.32",
+          "1.21.3-53.0.30",
+          "1.21.3-53.0.29",
+          "1.21.3-53.0.28",
+          "1.21.3-53.0.27",
+          "1.21.3-53.0.26",
+          "1.21.3-53.0.25",
+          "1.21.3-53.0.24",
+          "1.21.3-53.0.23",
+          "1.21.3-53.0.21",
+          "1.21.3-53.0.19",
+          "1.21.3-53.0.17",
+          "1.21.3-53.0.14",
+          "1.21.3-53.0.13",
+          "1.21.3-53.0.12",
+          "1.21.3-53.0.11",
+          "1.21.3-53.0.10",
+          "1.21.3-53.0.9",
+          "1.21.3-53.0.8",
+          "1.21.3-53.0.7",
+          "1.21.3-53.0.5",
+          "1.21.3-53.0.4",
+          "1.21.3-53.0.3",
+          "1.21.3-53.0.2",
+          "1.21.3-53.0.1",
+          "1.21.3-53.0.0",
+          "1.21.3-53.1.3",
+          "1.21.3-53.1.4",
+          "1.21.3-53.1.5",
+          "1.21.3-53.1.6",
+          "1.21.3-53.1.7",
+          "1.21.3-53.1.9",
+          "1.21.3-53.1.10",
+          "1.21.3-53.1.11",
+          "1.21.3-53.1.12",
+          "1.21.3-53.1.14",
+          "1.21.3-53.1.15",
+          "1.21.3-53.1.16"
+        ]
+      }
+    },
+    {
+      "id": "1.21.4",
+      "releaseTime": "2024-12-03T10:12:57+00:00",
+      "manifest": "https://piston-meta.mojang.com/v1/packages/2e024c9834568a872f8c009a97b29d8d7381d00a/1.21.4.json",
+      "manifestSha1": "2e024c9834568a872f8c009a97b29d8d7381d00a",
+      "java": {
+        "component": "java-runtime-delta",
+        "majorVersion": 21
+      },
+      "client": {
+        "sha1": "a7e5a6024bfd3cd614625aa05629adf760020304",
+        "size": 28335587,
+        "url": "https://piston-data.mojang.com/v1/objects/a7e5a6024bfd3cd614625aa05629adf760020304/client.jar"
+      },
+      "mappings": {
+        "sha1": "0cf2a0b7f056da1a5a5dd99fc6dc752f33987150",
+        "size": 10323161,
+        "url": "https://piston-data.mojang.com/v1/objects/0cf2a0b7f056da1a5a5dd99fc6dc752f33987150/client.txt"
+      },
+      "fabric": {
+        "source": "https://meta.fabricmc.net/v2/versions/loader/1.21.4",
+        "loader": {
+          "separator": ".",
+          "build": 1,
+          "maven": "net.fabricmc:fabric-loader:0.20.1",
+          "version": "0.20.1",
+          "stable": true
+        },
+        "intermediary": {
+          "maven": "net.fabricmc:intermediary:1.21.4",
+          "version": "1.21.4",
+          "stable": true
+        }
+      },
+      "forge": {
+        "source": "https://maven.minecraftforge.net/net/minecraftforge/forge/maven-metadata.xml",
+        "count": 53,
+        "reference": "1.21.4-54.1.22",
+        "publications": [
+          "1.21.4-54.1.6",
+          "1.21.4-54.1.5",
+          "1.21.4-54.1.4",
+          "1.21.4-54.1.3",
+          "1.21.4-54.1.2",
+          "1.21.4-54.1.1",
+          "1.21.4-54.1.0",
+          "1.21.4-54.0.38",
+          "1.21.4-54.0.37",
+          "1.21.4-54.0.36",
+          "1.21.4-54.0.35",
+          "1.21.4-54.0.34",
+          "1.21.4-54.0.33",
+          "1.21.4-54.0.32",
+          "1.21.4-54.0.31",
+          "1.21.4-54.0.30",
+          "1.21.4-54.0.29",
+          "1.21.4-54.0.27",
+          "1.21.4-54.0.26",
+          "1.21.4-54.0.25",
+          "1.21.4-54.0.24",
+          "1.21.4-54.0.21",
+          "1.21.4-54.0.20",
+          "1.21.4-54.0.18",
+          "1.21.4-54.0.17",
+          "1.21.4-54.0.16",
+          "1.21.4-54.0.15",
+          "1.21.4-54.0.14",
+          "1.21.4-54.0.13",
+          "1.21.4-54.0.12",
+          "1.21.4-54.0.11",
+          "1.21.4-54.0.10",
+          "1.21.4-54.0.9",
+          "1.21.4-54.0.7",
+          "1.21.4-54.0.6",
+          "1.21.4-54.0.5",
+          "1.21.4-54.0.3",
+          "1.21.4-54.0.1",
+          "1.21.4-54.0.0",
+          "1.21.4-54.1.7",
+          "1.21.4-54.1.8",
+          "1.21.4-54.1.10",
+          "1.21.4-54.1.11",
+          "1.21.4-54.1.12",
+          "1.21.4-54.1.13",
+          "1.21.4-54.1.14",
+          "1.21.4-54.1.15",
+          "1.21.4-54.1.16",
+          "1.21.4-54.1.17",
+          "1.21.4-54.1.18",
+          "1.21.4-54.1.20",
+          "1.21.4-54.1.21",
+          "1.21.4-54.1.22"
+        ]
+      }
+    },
+    {
+      "id": "1.21.5",
+      "releaseTime": "2025-03-25T12:14:58+00:00",
+      "manifest": "https://piston-meta.mojang.com/v1/packages/5ca2012338100e4dbfef0d2114a5fa66959ab1e5/1.21.5.json",
+      "manifestSha1": "5ca2012338100e4dbfef0d2114a5fa66959ab1e5",
+      "java": {
+        "component": "java-runtime-delta",
+        "majorVersion": 21
+      },
+      "client": {
+        "sha1": "b88808bbb3da8d9f453694b5d8f74a3396f1a533",
+        "size": 28984409,
+        "url": "https://piston-data.mojang.com/v1/objects/b88808bbb3da8d9f453694b5d8f74a3396f1a533/client.jar"
+      },
+      "mappings": {
+        "sha1": "57669731d542f98646772e91a0d68628f9827a5c",
+        "size": 10670987,
+        "url": "https://piston-data.mojang.com/v1/objects/57669731d542f98646772e91a0d68628f9827a5c/client.txt"
+      },
+      "fabric": {
+        "source": "https://meta.fabricmc.net/v2/versions/loader/1.21.5",
+        "loader": {
+          "separator": ".",
+          "build": 1,
+          "maven": "net.fabricmc:fabric-loader:0.20.1",
+          "version": "0.20.1",
+          "stable": true
+        },
+        "intermediary": {
+          "maven": "net.fabricmc:intermediary:1.21.5",
+          "version": "1.21.5",
+          "stable": true
+        }
+      },
+      "forge": {
+        "source": "https://maven.minecraftforge.net/net/minecraftforge/forge/maven-metadata.xml",
+        "count": 41,
+        "reference": "1.21.5-55.1.18",
+        "publications": [
+          "1.21.5-55.0.24",
+          "1.21.5-55.0.23",
+          "1.21.5-55.0.22",
+          "1.21.5-55.0.21",
+          "1.21.5-55.0.20",
+          "1.21.5-55.0.19",
+          "1.21.5-55.0.17",
+          "1.21.5-55.0.16",
+          "1.21.5-55.0.15",
+          "1.21.5-55.0.14",
+          "1.21.5-55.0.12",
+          "1.21.5-55.0.11",
+          "1.21.5-55.0.10",
+          "1.21.5-55.0.9",
+          "1.21.5-55.0.8",
+          "1.21.5-55.0.7",
+          "1.21.5-55.0.6",
+          "1.21.5-55.0.5",
+          "1.21.5-55.0.4",
+          "1.21.5-55.0.3",
+          "1.21.5-55.0.2",
+          "1.21.5-55.0.1",
+          "1.21.5-55.0.0",
+          "1.21.5-55.0.25",
+          "1.21.5-55.1.0",
+          "1.21.5-55.1.1",
+          "1.21.5-55.1.2",
+          "1.21.5-55.1.3",
+          "1.21.5-55.1.4",
+          "1.21.5-55.1.6",
+          "1.21.5-55.1.7",
+          "1.21.5-55.1.8",
+          "1.21.5-55.1.9",
+          "1.21.5-55.1.10",
+          "1.21.5-55.1.11",
+          "1.21.5-55.1.12",
+          "1.21.5-55.1.13",
+          "1.21.5-55.1.14",
+          "1.21.5-55.1.16",
+          "1.21.5-55.1.17",
+          "1.21.5-55.1.18"
+        ]
+      }
+    },
+    {
+      "id": "1.21.6",
+      "releaseTime": "2025-06-17T11:10:28+00:00",
+      "manifest": "https://piston-meta.mojang.com/v1/packages/4eb09bebca2356f7505e45544087d3109e8ce0e3/1.21.6.json",
+      "manifestSha1": "4eb09bebca2356f7505e45544087d3109e8ce0e3",
+      "java": {
+        "component": "java-runtime-delta",
+        "majorVersion": 21
+      },
+      "client": {
+        "sha1": "740a125b83dd3447feaa3c5e891ead7fbb21ae28",
+        "size": 29516555,
+        "url": "https://piston-data.mojang.com/v1/objects/740a125b83dd3447feaa3c5e891ead7fbb21ae28/client.jar"
+      },
+      "mappings": {
+        "sha1": "848855615bc81e3db1c85e69b6afb150807a1261",
+        "size": 10987575,
+        "url": "https://piston-data.mojang.com/v1/objects/848855615bc81e3db1c85e69b6afb150807a1261/client.txt"
+      },
+      "fabric": {
+        "source": "https://meta.fabricmc.net/v2/versions/loader/1.21.6",
+        "loader": {
+          "separator": ".",
+          "build": 1,
+          "maven": "net.fabricmc:fabric-loader:0.20.1",
+          "version": "0.20.1",
+          "stable": true
+        },
+        "intermediary": {
+          "maven": "net.fabricmc:intermediary:1.21.6",
+          "version": "1.21.6",
+          "stable": true
+        }
+      },
+      "forge": {
+        "source": "https://maven.minecraftforge.net/net/minecraftforge/forge/maven-metadata.xml",
+        "count": 10,
+        "reference": "1.21.6-56.0.9",
+        "publications": [
+          "1.21.6-56.0.9",
+          "1.21.6-56.0.8",
+          "1.21.6-56.0.7",
+          "1.21.6-56.0.6",
+          "1.21.6-56.0.5",
+          "1.21.6-56.0.4",
+          "1.21.6-56.0.3",
+          "1.21.6-56.0.2",
+          "1.21.6-56.0.1",
+          "1.21.6-56.0.0"
+        ]
+      }
+    },
+    {
+      "id": "1.21.7",
+      "releaseTime": "2025-06-30T09:32:16+00:00",
+      "manifest": "https://piston-meta.mojang.com/v1/packages/1b478ff245de95b05e3c1a1589f391ade22e1bd3/1.21.7.json",
+      "manifestSha1": "1b478ff245de95b05e3c1a1589f391ade22e1bd3",
+      "java": {
+        "component": "java-runtime-delta",
+        "majorVersion": 21
+      },
+      "client": {
+        "sha1": "a2db1ea98c37b2d00c83f6867fb8bb581a593e07",
+        "size": 29522178,
+        "url": "https://piston-data.mojang.com/v1/objects/a2db1ea98c37b2d00c83f6867fb8bb581a593e07/client.jar"
+      },
+      "mappings": {
+        "sha1": "8d83af626cae1865deaf55fbf96934be4886fd45",
+        "size": 10988969,
+        "url": "https://piston-data.mojang.com/v1/objects/8d83af626cae1865deaf55fbf96934be4886fd45/client.txt"
+      },
+      "fabric": {
+        "source": "https://meta.fabricmc.net/v2/versions/loader/1.21.7",
+        "loader": {
+          "separator": ".",
+          "build": 1,
+          "maven": "net.fabricmc:fabric-loader:0.20.1",
+          "version": "0.20.1",
+          "stable": true
+        },
+        "intermediary": {
+          "maven": "net.fabricmc:intermediary:1.21.7",
+          "version": "1.21.7",
+          "stable": true
+        }
+      },
+      "forge": {
+        "source": "https://maven.minecraftforge.net/net/minecraftforge/forge/maven-metadata.xml",
+        "count": 4,
+        "reference": "1.21.7-57.0.3",
+        "publications": [
+          "1.21.7-57.0.3",
+          "1.21.7-57.0.2",
+          "1.21.7-57.0.1",
+          "1.21.7-57.0.0"
+        ]
+      }
+    },
+    {
+      "id": "1.21.8",
+      "releaseTime": "2025-07-17T12:04:02+00:00",
+      "manifest": "https://piston-meta.mojang.com/v1/packages/17db9704e95a73d53452f07a9b472e428288defa/1.21.8.json",
+      "manifestSha1": "17db9704e95a73d53452f07a9b472e428288defa",
+      "java": {
+        "component": "java-runtime-delta",
+        "majorVersion": 21
+      },
+      "client": {
+        "sha1": "a19d9badbea944a4369fd0059e53bf7286597576",
+        "size": 29525242,
+        "url": "https://piston-data.mojang.com/v1/objects/a19d9badbea944a4369fd0059e53bf7286597576/client.jar"
+      },
+      "mappings": {
+        "sha1": "bdeb624c3aefba11d9d40f34bc96176350b549b6",
+        "size": 10989738,
+        "url": "https://piston-data.mojang.com/v1/objects/bdeb624c3aefba11d9d40f34bc96176350b549b6/client.txt"
+      },
+      "fabric": {
+        "source": "https://meta.fabricmc.net/v2/versions/loader/1.21.8",
+        "loader": {
+          "separator": ".",
+          "build": 1,
+          "maven": "net.fabricmc:fabric-loader:0.20.1",
+          "version": "0.20.1",
+          "stable": true
+        },
+        "intermediary": {
+          "maven": "net.fabricmc:intermediary:1.21.8",
+          "version": "1.21.8",
+          "stable": true
+        }
+      },
+      "forge": {
+        "source": "https://maven.minecraftforge.net/net/minecraftforge/forge/maven-metadata.xml",
+        "count": 35,
+        "reference": "1.21.8-58.1.26",
+        "publications": [
+          "1.21.8-58.0.3",
+          "1.21.8-58.0.2",
+          "1.21.8-58.0.1",
+          "1.21.8-58.0.0",
+          "1.21.8-58.0.4",
+          "1.21.8-58.0.5",
+          "1.21.8-58.0.6",
+          "1.21.8-58.0.7",
+          "1.21.8-58.0.8",
+          "1.21.8-58.0.9",
+          "1.21.8-58.0.10",
+          "1.21.8-58.1.0",
+          "1.21.8-58.1.1",
+          "1.21.8-58.1.2",
+          "1.21.8-58.1.3",
+          "1.21.8-58.1.4",
+          "1.21.8-58.1.6",
+          "1.21.8-58.1.7",
+          "1.21.8-58.1.8",
+          "1.21.8-58.1.9",
+          "1.21.8-58.1.10",
+          "1.21.8-58.1.11",
+          "1.21.8-58.1.12",
+          "1.21.8-58.1.13",
+          "1.21.8-58.1.14",
+          "1.21.8-58.1.16",
+          "1.21.8-58.1.17",
+          "1.21.8-58.1.18",
+          "1.21.8-58.1.19",
+          "1.21.8-58.1.20",
+          "1.21.8-58.1.21",
+          "1.21.8-58.1.22",
+          "1.21.8-58.1.24",
+          "1.21.8-58.1.25",
+          "1.21.8-58.1.26"
+        ]
+      }
+    },
+    {
+      "id": "1.21.9",
+      "releaseTime": "2025-09-30T11:58:43+00:00",
+      "manifest": "https://piston-meta.mojang.com/v1/packages/811c9cc308cd5b928defa6434a7975233eaa6184/1.21.9.json",
+      "manifestSha1": "811c9cc308cd5b928defa6434a7975233eaa6184",
+      "java": {
+        "component": "java-runtime-delta",
+        "majorVersion": 21
+      },
+      "client": {
+        "sha1": "ce92fd8d1b2460c41ceda07ae7b3fe863a80d045",
+        "size": 30591861,
+        "url": "https://piston-data.mojang.com/v1/objects/ce92fd8d1b2460c41ceda07ae7b3fe863a80d045/client.jar"
+      },
+      "mappings": {
+        "sha1": "3641ccb54eac2153c7e8274823c5a8e046beaba0",
+        "size": 11510637,
+        "url": "https://piston-data.mojang.com/v1/objects/3641ccb54eac2153c7e8274823c5a8e046beaba0/client.txt"
+      },
+      "fabric": {
+        "source": "https://meta.fabricmc.net/v2/versions/loader/1.21.9",
+        "loader": {
+          "separator": ".",
+          "build": 1,
+          "maven": "net.fabricmc:fabric-loader:0.20.1",
+          "version": "0.20.1",
+          "stable": true
+        },
+        "intermediary": {
+          "maven": "net.fabricmc:intermediary:1.21.9",
+          "version": "1.21.9",
+          "stable": true
+        }
+      },
+      "forge": {
+        "source": "https://maven.minecraftforge.net/net/minecraftforge/forge/maven-metadata.xml",
+        "count": 6,
+        "reference": "1.21.9-59.0.5",
+        "publications": [
+          "1.21.9-59.0.0",
+          "1.21.9-59.0.1",
+          "1.21.9-59.0.2",
+          "1.21.9-59.0.3",
+          "1.21.9-59.0.4",
+          "1.21.9-59.0.5"
+        ]
+      }
+    },
+    {
+      "id": "1.21.10",
+      "releaseTime": "2025-10-07T09:17:23+00:00",
+      "manifest": "https://piston-meta.mojang.com/v1/packages/b0dc919ace9cee9a91d5a6dcaa594d41a26fcb1b/1.21.10.json",
+      "manifestSha1": "b0dc919ace9cee9a91d5a6dcaa594d41a26fcb1b",
+      "java": {
+        "component": "java-runtime-delta",
+        "majorVersion": 21
+      },
+      "client": {
+        "sha1": "d3bdf582a7fa723ce199f3665588dcfe6bf9aca8",
+        "size": 30592168,
+        "url": "https://piston-data.mojang.com/v1/objects/d3bdf582a7fa723ce199f3665588dcfe6bf9aca8/client.jar"
+      },
+      "mappings": {
+        "sha1": "7e62354a697f95cf5e7d5981face0583676a9ef7",
+        "size": 11511143,
+        "url": "https://piston-data.mojang.com/v1/objects/7e62354a697f95cf5e7d5981face0583676a9ef7/client.txt"
+      },
+      "fabric": {
+        "source": "https://meta.fabricmc.net/v2/versions/loader/1.21.10",
+        "loader": {
+          "separator": ".",
+          "build": 1,
+          "maven": "net.fabricmc:fabric-loader:0.20.1",
+          "version": "0.20.1",
+          "stable": true
+        },
+        "intermediary": {
+          "maven": "net.fabricmc:intermediary:1.21.10",
+          "version": "1.21.10",
+          "stable": true
+        }
+      },
+      "forge": {
+        "source": "https://maven.minecraftforge.net/net/minecraftforge/forge/maven-metadata.xml",
+        "count": 36,
+        "reference": "1.21.10-60.1.18",
+        "publications": [
+          "1.21.10-60.0.0",
+          "1.21.10-60.0.1",
+          "1.21.10-60.0.3",
+          "1.21.10-60.0.4",
+          "1.21.10-60.0.5",
+          "1.21.10-60.0.6",
+          "1.21.10-60.0.7",
+          "1.21.10-60.0.8",
+          "1.21.10-60.0.9",
+          "1.21.10-60.0.10",
+          "1.21.10-60.0.11",
+          "1.21.10-60.0.12",
+          "1.21.10-60.0.13",
+          "1.21.10-60.0.14",
+          "1.21.10-60.0.15",
+          "1.21.10-60.0.16",
+          "1.21.10-60.0.17",
+          "1.21.10-60.0.18",
+          "1.21.10-60.0.19",
+          "1.21.10-60.0.20",
+          "1.21.10-60.0.21",
+          "1.21.10-60.1.0",
+          "1.21.10-60.1.3",
+          "1.21.10-60.1.4",
+          "1.21.10-60.1.5",
+          "1.21.10-60.1.7",
+          "1.21.10-60.1.8",
+          "1.21.10-60.1.9",
+          "1.21.10-60.1.10",
+          "1.21.10-60.1.11",
+          "1.21.10-60.1.12",
+          "1.21.10-60.1.13",
+          "1.21.10-60.1.14",
+          "1.21.10-60.1.15",
+          "1.21.10-60.1.17",
+          "1.21.10-60.1.18"
+        ]
+      }
+    },
+    {
+      "id": "1.21.11",
+      "releaseTime": "2025-12-09T12:23:30+00:00",
+      "manifest": "https://piston-meta.mojang.com/v1/packages/35f8a9bc4874e2c95e51b3ad21e043a33776f7c2/1.21.11.json",
+      "manifestSha1": "35f8a9bc4874e2c95e51b3ad21e043a33776f7c2",
+      "java": {
+        "component": "java-runtime-delta",
+        "majorVersion": 21
+      },
+      "client": {
+        "sha1": "ba2df812c2d12e0219c489c4cd9a5e1f0760f5bd",
+        "size": 31152600,
+        "url": "https://piston-data.mojang.com/v1/objects/ba2df812c2d12e0219c489c4cd9a5e1f0760f5bd/client.jar"
+      },
+      "mappings": {
+        "sha1": "031a68bebf55d824f66d6573d8c752f0e1bf232a",
+        "size": 11779287,
+        "url": "https://piston-data.mojang.com/v1/objects/031a68bebf55d824f66d6573d8c752f0e1bf232a/client.txt"
+      },
+      "fabric": {
+        "source": "https://meta.fabricmc.net/v2/versions/loader/1.21.11",
+        "loader": {
+          "separator": ".",
+          "build": 1,
+          "maven": "net.fabricmc:fabric-loader:0.20.1",
+          "version": "0.20.1",
+          "stable": true
+        },
+        "intermediary": {
+          "maven": "net.fabricmc:intermediary:1.21.11",
+          "version": "1.21.11",
+          "stable": true
+        }
+      },
+      "forge": {
+        "source": "https://maven.minecraftforge.net/net/minecraftforge/forge/maven-metadata.xml",
+        "count": 34,
+        "reference": "1.21.11-61.2.5",
+        "publications": [
+          "1.21.11-61.0.0",
+          "1.21.11-61.0.1",
+          "1.21.11-61.0.2",
+          "1.21.11-61.0.3",
+          "1.21.11-61.0.4",
+          "1.21.11-61.0.5",
+          "1.21.11-61.0.6",
+          "1.21.11-61.0.7",
+          "1.21.11-61.0.8",
+          "1.21.11-61.0.10",
+          "1.21.11-61.0.11",
+          "1.21.11-61.0.12",
+          "1.21.11-61.0.13",
+          "1.21.11-61.0.14",
+          "1.21.11-61.1.0",
+          "1.21.11-61.1.1",
+          "1.21.11-61.1.3",
+          "1.21.11-61.1.4",
+          "1.21.11-61.1.5",
+          "1.21.11-61.1.7",
+          "1.21.11-61.1.8",
+          "1.21.11-61.1.9",
+          "1.21.11-61.1.10",
+          "1.21.11-61.1.11",
+          "1.21.11-61.1.12",
+          "1.21.11-61.1.13",
+          "1.21.11-61.1.14",
+          "1.21.11-61.1.15",
+          "1.21.11-61.1.16",
+          "1.21.11-61.2.0",
+          "1.21.11-61.2.1",
+          "1.21.11-61.2.3",
+          "1.21.11-61.2.4",
+          "1.21.11-61.2.5"
+        ]
+      }
+    }
+  ],
+  "lunar": {
+    "source": "https://api.lunarclientprod.com/launcher/metadata?launcher_version=3.7.32",
+    "request": {
+      "launcher_version": "3.7.32",
+      "userAgent": "Lunar Client Launcher v3.7.32"
+    },
+    "alert": {
+      "id": "launcher-update-required",
+      "text": "You must update your Lunar Client launcher at lunarclient.com/download to continue playing.",
+      "color": "RED",
+      "link": "https://lunarclient.com/download"
+    },
+    "versions": [],
+    "conclusion": "The list is unusable when an update is required; it does not prove that any profile is unavailable."
+  }
+}
