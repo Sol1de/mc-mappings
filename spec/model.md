@@ -78,9 +78,9 @@ The list of symbols needed by mc-bridge must be derived from its public operatio
 
 The example in the table format uses synthetic symbols only. It is not the Minecraft v1 catalog and does not claim support for a real configuration. Real tables must define the agreed symbols before their support can be announced.
 
-## Validation cases for the eventual implementation
+## Validation cases
 
-These cases document expected behavior; no executable tests or Rust implementation are introduced by this specification.
+These cases document the full expected behavior. The crate currently implements structural and local validation; selection, resolution, and cross-table auditing remain separate work.
 
 | Case | Expected result |
 | --- | --- |

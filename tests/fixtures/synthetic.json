@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "data_version": 1,
+  "catalog": {
+    "classes": ["example.client"],
+    "fields": ["example.client.counter"],
+    "methods": ["example.client.find", "example.client.find_by_index"]
+  },
+  "configurations": [
+    {
+      "minecraft_version": "1.21",
+      "launcher": "standard",
+      "loader": "none",
+      "profile_id": "example.standard"
+    }
+  ],
+  "profiles": [
+    {
+      "profile_id": "example.standard",
+      "classes": [
+        {"id": "example.client", "runtime_name": "example/runtime/Client"}
+      ],
+      "fields": [
+        {
+          "id": "example.client.counter",
+          "owner": "example.client",
+          "runtime_name": "a",
+          "static": false,
+          "type": {"kind": "primitive", "name": "int"}
+        }
+      ],
+      "methods": [
+        {
+          "id": "example.client.find",
+          "owner": "example.client",
+          "runtime_name": "b",
+          "static": false,
+          "parameters": [
+            {"kind": "external", "runtime_name": "java/lang/String"}
+          ],
+          "returns": {"kind": "class", "id": "example.client"}
+        },
+        {
+          "id": "example.client.find_by_index",
+          "owner": "example.client",
+          "runtime_name": "b",
+          "static": false,
+          "parameters": [{"kind": "primitive", "name": "int"}],
+          "returns": {
+            "kind": "array",
+            "element": {"kind": "class", "id": "example.client"}
+          }
+        }
+      ]
+    }
+  ]
+}

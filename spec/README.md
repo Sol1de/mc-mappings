@@ -10,7 +10,8 @@
 
 Implementation and validation progress is tracked in tickets and issues. These documents define the intended coverage without duplicating progress tracking.
 
-The model and table format are specifications only. No Rust implementation or production mapping tables are provided yet.
+The Rust model and structural/local JSON validation are implemented in the crate.
+Cross-table auditing, resolution, and production mapping tables are not provided yet.
 
 ## Scope
 
