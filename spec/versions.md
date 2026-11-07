@@ -10,3 +10,5 @@ The intended coverage includes **1.21 and 1.21.11**, for the [listed configurati
 The descriptors come from the [official Mojang manifest](https://piston-meta.mojang.com/mc/game/version_manifest_v2.json). Each contains a client and a client_mappings reference; their download details and hashes are retained in the [evidence](references.md).
 
 Versions are exact identities: 1.21 does not refer to the entire 1.21.x series. The existence of Mojang mappings does not guarantee that Fabric, Forge, or Lunar use the same names at runtime. Rules for adding versions and preserving support are in the [README](README.md#coverage-changes-and-regression-checks).
+
+The only input alias is `1.21.0`, normalized to `1.21`. After this normalization, a version must occur in the mapping registry for the requested configuration to be supported. Other inputs, including unlisted stable versions, snapshots, pre-releases, and release candidates, are all unsupported without separate version categories. See the [selection rules](model.md#configuration-selection).
