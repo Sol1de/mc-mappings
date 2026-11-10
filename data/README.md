@@ -9,7 +9,7 @@ It is produced by `mc_mappings_generator` (repository `mc_mappings_generator`,
 (`consumers/mc_mappings/catalog-v1.json` there), listed in [spec/catalog.md](../spec/catalog.md).
 Load it with `Dataset::minecraft_v1()`; check it with `cargo run --example audit`.
 Every catalog symbol is resolved and verified in every configuration; identical tables are shared
-(6 profiles for 10 configurations).
+(5 profiles for 10 configurations; the Fabric tables of 1.21 and 1.21.11 are identical).
 
 `minecraft-v1.provenance.json` records, per configuration, the generated file's SHA-256 and its
 upstream inputs (URLs, SHA-256, licences, loader builds, Lunar class-cache hashes) and the proof of

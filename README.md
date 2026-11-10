@@ -18,7 +18,7 @@ assert_eq!((m.runtime_name, m.descriptor.as_str(), m.is_static), ("method_1551",
 ## Coverage
 
 `data/minecraft-v1.json` (`schema_version` 1, `data_version` 1) covers the
-[catalog](spec/catalog.md) (19 classes, 9 fields, 37 methods) on every target configuration:
+[catalog](spec/catalog.md) (19 classes, 13 fields, 36 methods) on every target configuration:
 
 | Minecraft | Launcher | Loader | Runtime names (verified) |
 | --- | --- | --- | --- |
@@ -28,7 +28,7 @@ assert_eq!((m.runtime_name, m.descriptor.as_str(), m.is_static), ("method_1551",
 | 1.21, 1.21.11 | lunar | none | Mojang (not the Vanilla names) |
 | 1.21, 1.21.11 | lunar | fabric | Intermediary |
 
-Configurations whose tables were verified identical share a profile (6 profiles for 10
+Configurations whose tables were verified identical share a profile (5 profiles for 10
 configurations); their identities stay separate. Any other version (`1.21.1`, snapshots, release
 candidates), and Lunar/Forge, is an unsupported configuration. `1.21.0` is the only alias.
 Provenance, reference builds and licences: [data/README.md](data/README.md),

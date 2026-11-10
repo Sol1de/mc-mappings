@@ -32,7 +32,11 @@
       "minecraft.abstract_container_menu.container_id",
       "minecraft.vec3.x",
       "minecraft.vec3.y",
-      "minecraft.vec3.z"
+      "minecraft.vec3.z",
+      "minecraft.click_type.pickup",
+      "minecraft.click_type.quick_move",
+      "minecraft.click_type.swap",
+      "minecraft.click_type.throw"
     ],
     "methods": [
       "minecraft.client.get_instance",
@@ -48,7 +52,6 @@
       "minecraft.entity.get_x",
       "minecraft.entity.get_y",
       "minecraft.entity.get_z",
-      "minecraft.entity.position",
       "minecraft.entity.get_y_rot",
       "minecraft.entity.get_x_rot",
       "minecraft.entity.set_y_rot",
@@ -79,7 +82,7 @@
       "minecraft_version": "1.21",
       "launcher": "lunar",
       "loader": "fabric",
-      "profile_id": "mc1_21_lunar_fabric.mc1_21_standard_fabric"
+      "profile_id": "mc1_21_lunar_fabric.mc1_21_standard_fabric.mc1_21_11_lunar_fabric.mc1_21_11_standard_fabric"
     },
     {
       "minecraft_version": "1.21",
@@ -91,7 +94,7 @@
       "minecraft_version": "1.21",
       "launcher": "standard",
       "loader": "fabric",
-      "profile_id": "mc1_21_lunar_fabric.mc1_21_standard_fabric"
+      "profile_id": "mc1_21_lunar_fabric.mc1_21_standard_fabric.mc1_21_11_lunar_fabric.mc1_21_11_standard_fabric"
     },
     {
       "minecraft_version": "1.21",
@@ -109,7 +112,7 @@
       "minecraft_version": "1.21.11",
       "launcher": "lunar",
       "loader": "fabric",
-      "profile_id": "mc1_21_11_lunar_fabric.mc1_21_11_standard_fabric"
+      "profile_id": "mc1_21_lunar_fabric.mc1_21_standard_fabric.mc1_21_11_lunar_fabric.mc1_21_11_standard_fabric"
     },
     {
       "minecraft_version": "1.21.11",
@@ -121,7 +124,7 @@
       "minecraft_version": "1.21.11",
       "launcher": "standard",
       "loader": "fabric",
-      "profile_id": "mc1_21_11_lunar_fabric.mc1_21_11_standard_fabric"
+      "profile_id": "mc1_21_lunar_fabric.mc1_21_standard_fabric.mc1_21_11_lunar_fabric.mc1_21_11_standard_fabric"
     },
     {
       "minecraft_version": "1.21.11",
@@ -137,628 +140,6 @@
     }
   ],
   "profiles": [
-    {
-      "profile_id": "mc1_21_11_lunar_fabric.mc1_21_11_standard_fabric",
-      "classes": [
-        {
-          "id": "minecraft.client",
-          "runtime_name": "net/minecraft/class_310"
-        },
-        {
-          "id": "minecraft.blockable_event_loop",
-          "runtime_name": "net/minecraft/class_1255"
-        },
-        {
-          "id": "minecraft.user",
-          "runtime_name": "net/minecraft/class_320"
-        },
-        {
-          "id": "minecraft.entity",
-          "runtime_name": "net/minecraft/class_1297"
-        },
-        {
-          "id": "minecraft.entity_type",
-          "runtime_name": "net/minecraft/class_1299"
-        },
-        {
-          "id": "minecraft.living_entity",
-          "runtime_name": "net/minecraft/class_1309"
-        },
-        {
-          "id": "minecraft.player",
-          "runtime_name": "net/minecraft/class_1657"
-        },
-        {
-          "id": "minecraft.local_player",
-          "runtime_name": "net/minecraft/class_746"
-        },
-        {
-          "id": "minecraft.inventory",
-          "runtime_name": "net/minecraft/class_1661"
-        },
-        {
-          "id": "minecraft.item_stack",
-          "runtime_name": "net/minecraft/class_1799"
-        },
-        {
-          "id": "minecraft.item",
-          "runtime_name": "net/minecraft/class_1792"
-        },
-        {
-          "id": "minecraft.level",
-          "runtime_name": "net/minecraft/class_1937"
-        },
-        {
-          "id": "minecraft.client_level",
-          "runtime_name": "net/minecraft/class_638"
-        },
-        {
-          "id": "minecraft.resource_key",
-          "runtime_name": "net/minecraft/class_5321"
-        },
-        {
-          "id": "minecraft.resource_location",
-          "runtime_name": "net/minecraft/class_2960"
-        },
-        {
-          "id": "minecraft.vec3",
-          "runtime_name": "net/minecraft/class_243"
-        },
-        {
-          "id": "minecraft.multi_player_game_mode",
-          "runtime_name": "net/minecraft/class_636"
-        },
-        {
-          "id": "minecraft.abstract_container_menu",
-          "runtime_name": "net/minecraft/class_1703"
-        },
-        {
-          "id": "minecraft.click_type",
-          "runtime_name": "net/minecraft/class_1713"
-        }
-      ],
-      "fields": [
-        {
-          "id": "minecraft.client.player",
-          "owner": "minecraft.client",
-          "runtime_name": "field_1724",
-          "static": false,
-          "type": {
-            "kind": "class",
-            "id": "minecraft.local_player"
-          }
-        },
-        {
-          "id": "minecraft.client.level",
-          "owner": "minecraft.client",
-          "runtime_name": "field_1687",
-          "static": false,
-          "type": {
-            "kind": "class",
-            "id": "minecraft.client_level"
-          }
-        },
-        {
-          "id": "minecraft.client.game_mode",
-          "owner": "minecraft.client",
-          "runtime_name": "field_1761",
-          "static": false,
-          "type": {
-            "kind": "class",
-            "id": "minecraft.multi_player_game_mode"
-          }
-        },
-        {
-          "id": "minecraft.player.container_menu",
-          "owner": "minecraft.player",
-          "runtime_name": "field_7512",
-          "static": false,
-          "type": {
-            "kind": "class",
-            "id": "minecraft.abstract_container_menu"
-          }
-        },
-        {
-          "id": "minecraft.inventory.selected",
-          "owner": "minecraft.inventory",
-          "runtime_name": "field_7545",
-          "static": false,
-          "type": {
-            "kind": "primitive",
-            "name": "int"
-          }
-        },
-        {
-          "id": "minecraft.abstract_container_menu.container_id",
-          "owner": "minecraft.abstract_container_menu",
-          "runtime_name": "field_7763",
-          "static": false,
-          "type": {
-            "kind": "primitive",
-            "name": "int"
-          }
-        },
-        {
-          "id": "minecraft.vec3.x",
-          "owner": "minecraft.vec3",
-          "runtime_name": "field_1352",
-          "static": false,
-          "type": {
-            "kind": "primitive",
-            "name": "double"
-          }
-        },
-        {
-          "id": "minecraft.vec3.y",
-          "owner": "minecraft.vec3",
-          "runtime_name": "field_1351",
-          "static": false,
-          "type": {
-            "kind": "primitive",
-            "name": "double"
-          }
-        },
-        {
-          "id": "minecraft.vec3.z",
-          "owner": "minecraft.vec3",
-          "runtime_name": "field_1350",
-          "static": false,
-          "type": {
-            "kind": "primitive",
-            "name": "double"
-          }
-        }
-      ],
-      "methods": [
-        {
-          "id": "minecraft.client.get_instance",
-          "owner": "minecraft.client",
-          "runtime_name": "method_1551",
-          "static": true,
-          "parameters": [],
-          "returns": {
-            "kind": "class",
-            "id": "minecraft.client"
-          }
-        },
-        {
-          "id": "minecraft.client.get_user",
-          "owner": "minecraft.client",
-          "runtime_name": "method_1548",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "class",
-            "id": "minecraft.user"
-          }
-        },
-        {
-          "id": "minecraft.client.tick",
-          "owner": "minecraft.client",
-          "runtime_name": "method_1574",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "void"
-          }
-        },
-        {
-          "id": "minecraft.blockable_event_loop.execute",
-          "owner": "minecraft.blockable_event_loop",
-          "runtime_name": "execute",
-          "static": false,
-          "parameters": [
-            {
-              "kind": "external",
-              "runtime_name": "java/lang/Runnable"
-            }
-          ],
-          "returns": {
-            "kind": "void"
-          }
-        },
-        {
-          "id": "minecraft.blockable_event_loop.is_same_thread",
-          "owner": "minecraft.blockable_event_loop",
-          "runtime_name": "method_18854",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "primitive",
-            "name": "boolean"
-          }
-        },
-        {
-          "id": "minecraft.user.get_name",
-          "owner": "minecraft.user",
-          "runtime_name": "method_1676",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "external",
-            "runtime_name": "java/lang/String"
-          }
-        },
-        {
-          "id": "minecraft.user.get_profile_id",
-          "owner": "minecraft.user",
-          "runtime_name": "method_44717",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "external",
-            "runtime_name": "java/util/UUID"
-          }
-        },
-        {
-          "id": "minecraft.entity.get_id",
-          "owner": "minecraft.entity",
-          "runtime_name": "method_5628",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "primitive",
-            "name": "int"
-          }
-        },
-        {
-          "id": "minecraft.entity.get_uuid",
-          "owner": "minecraft.entity",
-          "runtime_name": "method_5667",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "external",
-            "runtime_name": "java/util/UUID"
-          }
-        },
-        {
-          "id": "minecraft.entity.get_type",
-          "owner": "minecraft.entity",
-          "runtime_name": "method_5864",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "class",
-            "id": "minecraft.entity_type"
-          }
-        },
-        {
-          "id": "minecraft.entity.get_x",
-          "owner": "minecraft.entity",
-          "runtime_name": "method_23317",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "primitive",
-            "name": "double"
-          }
-        },
-        {
-          "id": "minecraft.entity.get_y",
-          "owner": "minecraft.entity",
-          "runtime_name": "method_23318",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "primitive",
-            "name": "double"
-          }
-        },
-        {
-          "id": "minecraft.entity.get_z",
-          "owner": "minecraft.entity",
-          "runtime_name": "method_23321",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "primitive",
-            "name": "double"
-          }
-        },
-        {
-          "id": "minecraft.entity.position",
-          "owner": "minecraft.entity",
-          "runtime_name": "method_73189",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "class",
-            "id": "minecraft.vec3"
-          }
-        },
-        {
-          "id": "minecraft.entity.get_y_rot",
-          "owner": "minecraft.entity",
-          "runtime_name": "method_36454",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "primitive",
-            "name": "float"
-          }
-        },
-        {
-          "id": "minecraft.entity.get_x_rot",
-          "owner": "minecraft.entity",
-          "runtime_name": "method_36455",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "primitive",
-            "name": "float"
-          }
-        },
-        {
-          "id": "minecraft.entity.set_y_rot",
-          "owner": "minecraft.entity",
-          "runtime_name": "method_36456",
-          "static": false,
-          "parameters": [
-            {
-              "kind": "primitive",
-              "name": "float"
-            }
-          ],
-          "returns": {
-            "kind": "void"
-          }
-        },
-        {
-          "id": "minecraft.entity.set_x_rot",
-          "owner": "minecraft.entity",
-          "runtime_name": "method_36457",
-          "static": false,
-          "parameters": [
-            {
-              "kind": "primitive",
-              "name": "float"
-            }
-          ],
-          "returns": {
-            "kind": "void"
-          }
-        },
-        {
-          "id": "minecraft.entity.get_delta_movement",
-          "owner": "minecraft.entity",
-          "runtime_name": "method_18798",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "class",
-            "id": "minecraft.vec3"
-          }
-        },
-        {
-          "id": "minecraft.entity.set_delta_movement",
-          "owner": "minecraft.entity",
-          "runtime_name": "method_18799",
-          "static": false,
-          "parameters": [
-            {
-              "kind": "class",
-              "id": "minecraft.vec3"
-            }
-          ],
-          "returns": {
-            "kind": "void"
-          }
-        },
-        {
-          "id": "minecraft.entity.is_alive",
-          "owner": "minecraft.entity",
-          "runtime_name": "method_5805",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "primitive",
-            "name": "boolean"
-          }
-        },
-        {
-          "id": "minecraft.entity.is_removed",
-          "owner": "minecraft.entity",
-          "runtime_name": "method_31481",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "primitive",
-            "name": "boolean"
-          }
-        },
-        {
-          "id": "minecraft.entity.on_ground",
-          "owner": "minecraft.entity",
-          "runtime_name": "method_24828",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "primitive",
-            "name": "boolean"
-          }
-        },
-        {
-          "id": "minecraft.entity_type.get_description_id",
-          "owner": "minecraft.entity_type",
-          "runtime_name": "method_5882",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "external",
-            "runtime_name": "java/lang/String"
-          }
-        },
-        {
-          "id": "minecraft.living_entity.get_health",
-          "owner": "minecraft.living_entity",
-          "runtime_name": "method_6032",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "primitive",
-            "name": "float"
-          }
-        },
-        {
-          "id": "minecraft.living_entity.get_max_health",
-          "owner": "minecraft.living_entity",
-          "runtime_name": "method_6063",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "primitive",
-            "name": "float"
-          }
-        },
-        {
-          "id": "minecraft.player.get_inventory",
-          "owner": "minecraft.player",
-          "runtime_name": "method_31548",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "class",
-            "id": "minecraft.inventory"
-          }
-        },
-        {
-          "id": "minecraft.inventory.get_item",
-          "owner": "minecraft.inventory",
-          "runtime_name": "method_5438",
-          "static": false,
-          "parameters": [
-            {
-              "kind": "primitive",
-              "name": "int"
-            }
-          ],
-          "returns": {
-            "kind": "class",
-            "id": "minecraft.item_stack"
-          }
-        },
-        {
-          "id": "minecraft.inventory.get_container_size",
-          "owner": "minecraft.inventory",
-          "runtime_name": "method_5439",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "primitive",
-            "name": "int"
-          }
-        },
-        {
-          "id": "minecraft.item_stack.is_empty",
-          "owner": "minecraft.item_stack",
-          "runtime_name": "method_7960",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "primitive",
-            "name": "boolean"
-          }
-        },
-        {
-          "id": "minecraft.item_stack.get_count",
-          "owner": "minecraft.item_stack",
-          "runtime_name": "method_7947",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "primitive",
-            "name": "int"
-          }
-        },
-        {
-          "id": "minecraft.item_stack.get_item",
-          "owner": "minecraft.item_stack",
-          "runtime_name": "method_7909",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "class",
-            "id": "minecraft.item"
-          }
-        },
-        {
-          "id": "minecraft.item.get_description_id",
-          "owner": "minecraft.item",
-          "runtime_name": "method_7876",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "external",
-            "runtime_name": "java/lang/String"
-          }
-        },
-        {
-          "id": "minecraft.client_level.entities_for_rendering",
-          "owner": "minecraft.client_level",
-          "runtime_name": "method_18112",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "external",
-            "runtime_name": "java/lang/Iterable"
-          }
-        },
-        {
-          "id": "minecraft.level.dimension",
-          "owner": "minecraft.level",
-          "runtime_name": "method_27983",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "class",
-            "id": "minecraft.resource_key"
-          }
-        },
-        {
-          "id": "minecraft.resource_key.location",
-          "owner": "minecraft.resource_key",
-          "runtime_name": "method_29177",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "class",
-            "id": "minecraft.resource_location"
-          }
-        },
-        {
-          "id": "minecraft.multi_player_game_mode.handle_inventory_mouse_click",
-          "owner": "minecraft.multi_player_game_mode",
-          "runtime_name": "method_2906",
-          "static": false,
-          "parameters": [
-            {
-              "kind": "primitive",
-              "name": "int"
-            },
-            {
-              "kind": "primitive",
-              "name": "int"
-            },
-            {
-              "kind": "primitive",
-              "name": "int"
-            },
-            {
-              "kind": "class",
-              "id": "minecraft.click_type"
-            },
-            {
-              "kind": "class",
-              "id": "minecraft.player"
-            }
-          ],
-          "returns": {
-            "kind": "void"
-          }
-        }
-      ]
-    },
     {
       "profile_id": "mc1_21_11_lunar_none.mc1_21_11_standard_forge",
       "classes": [
@@ -929,6 +310,46 @@
             "kind": "primitive",
             "name": "double"
           }
+        },
+        {
+          "id": "minecraft.click_type.pickup",
+          "owner": "minecraft.click_type",
+          "runtime_name": "PICKUP",
+          "static": true,
+          "type": {
+            "kind": "class",
+            "id": "minecraft.click_type"
+          }
+        },
+        {
+          "id": "minecraft.click_type.quick_move",
+          "owner": "minecraft.click_type",
+          "runtime_name": "QUICK_MOVE",
+          "static": true,
+          "type": {
+            "kind": "class",
+            "id": "minecraft.click_type"
+          }
+        },
+        {
+          "id": "minecraft.click_type.swap",
+          "owner": "minecraft.click_type",
+          "runtime_name": "SWAP",
+          "static": true,
+          "type": {
+            "kind": "class",
+            "id": "minecraft.click_type"
+          }
+        },
+        {
+          "id": "minecraft.click_type.throw",
+          "owner": "minecraft.click_type",
+          "runtime_name": "THROW",
+          "static": true,
+          "type": {
+            "kind": "class",
+            "id": "minecraft.click_type"
+          }
         }
       ],
       "methods": [
@@ -1079,17 +500,6 @@
           }
         },
         {
-          "id": "minecraft.entity.position",
-          "owner": "minecraft.entity",
-          "runtime_name": "position",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "class",
-            "id": "minecraft.vec3"
-          }
-        },
-        {
           "id": "minecraft.entity.get_y_rot",
           "owner": "minecraft.entity",
           "runtime_name": "getYRot",
@@ -1159,8 +569,16 @@
           "static": false,
           "parameters": [
             {
-              "kind": "class",
-              "id": "minecraft.vec3"
+              "kind": "primitive",
+              "name": "double"
+            },
+            {
+              "kind": "primitive",
+              "name": "double"
+            },
+            {
+              "kind": "primitive",
+              "name": "double"
             }
           ],
           "returns": {
@@ -1551,6 +969,46 @@
             "kind": "primitive",
             "name": "double"
           }
+        },
+        {
+          "id": "minecraft.click_type.pickup",
+          "owner": "minecraft.click_type",
+          "runtime_name": "a",
+          "static": true,
+          "type": {
+            "kind": "class",
+            "id": "minecraft.click_type"
+          }
+        },
+        {
+          "id": "minecraft.click_type.quick_move",
+          "owner": "minecraft.click_type",
+          "runtime_name": "b",
+          "static": true,
+          "type": {
+            "kind": "class",
+            "id": "minecraft.click_type"
+          }
+        },
+        {
+          "id": "minecraft.click_type.swap",
+          "owner": "minecraft.click_type",
+          "runtime_name": "c",
+          "static": true,
+          "type": {
+            "kind": "class",
+            "id": "minecraft.click_type"
+          }
+        },
+        {
+          "id": "minecraft.click_type.throw",
+          "owner": "minecraft.click_type",
+          "runtime_name": "e",
+          "static": true,
+          "type": {
+            "kind": "class",
+            "id": "minecraft.click_type"
+          }
         }
       ],
       "methods": [
@@ -1701,17 +1159,6 @@
           }
         },
         {
-          "id": "minecraft.entity.position",
-          "owner": "minecraft.entity",
-          "runtime_name": "dI",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "class",
-            "id": "minecraft.vec3"
-          }
-        },
-        {
           "id": "minecraft.entity.get_y_rot",
           "owner": "minecraft.entity",
           "runtime_name": "ec",
@@ -1777,12 +1224,20 @@
         {
           "id": "minecraft.entity.set_delta_movement",
           "owner": "minecraft.entity",
-          "runtime_name": "k",
+          "runtime_name": "m",
           "static": false,
           "parameters": [
             {
-              "kind": "class",
-              "id": "minecraft.vec3"
+              "kind": "primitive",
+              "name": "double"
+            },
+            {
+              "kind": "primitive",
+              "name": "double"
+            },
+            {
+              "kind": "primitive",
+              "name": "double"
             }
           ],
           "returns": {
@@ -2004,7 +1459,7 @@
       ]
     },
     {
-      "profile_id": "mc1_21_lunar_fabric.mc1_21_standard_fabric",
+      "profile_id": "mc1_21_lunar_fabric.mc1_21_standard_fabric.mc1_21_11_lunar_fabric.mc1_21_11_standard_fabric",
       "classes": [
         {
           "id": "minecraft.client",
@@ -2173,6 +1628,46 @@
             "kind": "primitive",
             "name": "double"
           }
+        },
+        {
+          "id": "minecraft.click_type.pickup",
+          "owner": "minecraft.click_type",
+          "runtime_name": "field_7790",
+          "static": true,
+          "type": {
+            "kind": "class",
+            "id": "minecraft.click_type"
+          }
+        },
+        {
+          "id": "minecraft.click_type.quick_move",
+          "owner": "minecraft.click_type",
+          "runtime_name": "field_7794",
+          "static": true,
+          "type": {
+            "kind": "class",
+            "id": "minecraft.click_type"
+          }
+        },
+        {
+          "id": "minecraft.click_type.swap",
+          "owner": "minecraft.click_type",
+          "runtime_name": "field_7791",
+          "static": true,
+          "type": {
+            "kind": "class",
+            "id": "minecraft.click_type"
+          }
+        },
+        {
+          "id": "minecraft.click_type.throw",
+          "owner": "minecraft.click_type",
+          "runtime_name": "field_7795",
+          "static": true,
+          "type": {
+            "kind": "class",
+            "id": "minecraft.click_type"
+          }
         }
       ],
       "methods": [
@@ -2323,17 +1818,6 @@
           }
         },
         {
-          "id": "minecraft.entity.position",
-          "owner": "minecraft.entity",
-          "runtime_name": "method_19538",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "class",
-            "id": "minecraft.vec3"
-          }
-        },
-        {
           "id": "minecraft.entity.get_y_rot",
           "owner": "minecraft.entity",
           "runtime_name": "method_36454",
@@ -2399,12 +1883,20 @@
         {
           "id": "minecraft.entity.set_delta_movement",
           "owner": "minecraft.entity",
-          "runtime_name": "method_18799",
+          "runtime_name": "method_18800",
           "static": false,
           "parameters": [
             {
-              "kind": "class",
-              "id": "minecraft.vec3"
+              "kind": "primitive",
+              "name": "double"
+            },
+            {
+              "kind": "primitive",
+              "name": "double"
+            },
+            {
+              "kind": "primitive",
+              "name": "double"
             }
           ],
           "returns": {
@@ -2795,6 +2287,46 @@
             "kind": "primitive",
             "name": "double"
           }
+        },
+        {
+          "id": "minecraft.click_type.pickup",
+          "owner": "minecraft.click_type",
+          "runtime_name": "PICKUP",
+          "static": true,
+          "type": {
+            "kind": "class",
+            "id": "minecraft.click_type"
+          }
+        },
+        {
+          "id": "minecraft.click_type.quick_move",
+          "owner": "minecraft.click_type",
+          "runtime_name": "QUICK_MOVE",
+          "static": true,
+          "type": {
+            "kind": "class",
+            "id": "minecraft.click_type"
+          }
+        },
+        {
+          "id": "minecraft.click_type.swap",
+          "owner": "minecraft.click_type",
+          "runtime_name": "SWAP",
+          "static": true,
+          "type": {
+            "kind": "class",
+            "id": "minecraft.click_type"
+          }
+        },
+        {
+          "id": "minecraft.click_type.throw",
+          "owner": "minecraft.click_type",
+          "runtime_name": "THROW",
+          "static": true,
+          "type": {
+            "kind": "class",
+            "id": "minecraft.click_type"
+          }
         }
       ],
       "methods": [
@@ -2945,17 +2477,6 @@
           }
         },
         {
-          "id": "minecraft.entity.position",
-          "owner": "minecraft.entity",
-          "runtime_name": "position",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "class",
-            "id": "minecraft.vec3"
-          }
-        },
-        {
           "id": "minecraft.entity.get_y_rot",
           "owner": "minecraft.entity",
           "runtime_name": "getYRot",
@@ -3025,8 +2546,16 @@
           "static": false,
           "parameters": [
             {
-              "kind": "class",
-              "id": "minecraft.vec3"
+              "kind": "primitive",
+              "name": "double"
+            },
+            {
+              "kind": "primitive",
+              "name": "double"
+            },
+            {
+              "kind": "primitive",
+              "name": "double"
             }
           ],
           "returns": {
@@ -3417,6 +2946,46 @@
             "kind": "primitive",
             "name": "double"
           }
+        },
+        {
+          "id": "minecraft.click_type.pickup",
+          "owner": "minecraft.click_type",
+          "runtime_name": "a",
+          "static": true,
+          "type": {
+            "kind": "class",
+            "id": "minecraft.click_type"
+          }
+        },
+        {
+          "id": "minecraft.click_type.quick_move",
+          "owner": "minecraft.click_type",
+          "runtime_name": "b",
+          "static": true,
+          "type": {
+            "kind": "class",
+            "id": "minecraft.click_type"
+          }
+        },
+        {
+          "id": "minecraft.click_type.swap",
+          "owner": "minecraft.click_type",
+          "runtime_name": "c",
+          "static": true,
+          "type": {
+            "kind": "class",
+            "id": "minecraft.click_type"
+          }
+        },
+        {
+          "id": "minecraft.click_type.throw",
+          "owner": "minecraft.click_type",
+          "runtime_name": "e",
+          "static": true,
+          "type": {
+            "kind": "class",
+            "id": "minecraft.click_type"
+          }
         }
       ],
       "methods": [
@@ -3567,17 +3136,6 @@
           }
         },
         {
-          "id": "minecraft.entity.position",
-          "owner": "minecraft.entity",
-          "runtime_name": "dm",
-          "static": false,
-          "parameters": [],
-          "returns": {
-            "kind": "class",
-            "id": "minecraft.vec3"
-          }
-        },
-        {
           "id": "minecraft.entity.get_y_rot",
           "owner": "minecraft.entity",
           "runtime_name": "dE",
@@ -3643,12 +3201,20 @@
         {
           "id": "minecraft.entity.set_delta_movement",
           "owner": "minecraft.entity",
-          "runtime_name": "i",
+          "runtime_name": "n",
           "static": false,
           "parameters": [
             {
-              "kind": "class",
-              "id": "minecraft.vec3"
+              "kind": "primitive",
+              "name": "double"
+            },
+            {
+              "kind": "primitive",
+              "name": "double"
+            },
+            {
+              "kind": "primitive",
+              "name": "double"
             }
           ],
           "returns": {

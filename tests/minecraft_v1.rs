@@ -244,3 +244,40 @@ fn only_the_target_versions_are_supported() {
         );
     }
 }
+
+#[test]
+fn symbols_for_the_mc_bridge_write_operations() {
+    let d = dataset();
+    for (v, l, o) in TARGETS {
+        // set_velocity uses the (double, double, double) overload: no Vec3 construction.
+        let (m, is_static) = method(&d, v, l, o, "minecraft.entity.set_delta_movement");
+        assert!(m.ends_with("(DDD)V") && !is_static, "{v} {l:?} {o:?}: {m}");
+        // click_slot passes ClickType enum constants, read as static fields.
+        let s = d.select(v, l, o).unwrap();
+        let click_type = class(&d, v, l, o, "minecraft.click_type");
+        for id in ["pickup", "quick_move", "swap", "throw"] {
+            let f = s
+                .field(
+                    &format!("minecraft.click_type.{id}")
+                        .parse::<FieldId>()
+                        .unwrap(),
+                )
+                .unwrap();
+            assert!(f.is_static);
+            assert_eq!(
+                (f.owner, f.descriptor.as_str()),
+                (click_type.as_str(), format!("L{click_type};").as_str())
+            );
+        }
+    }
+    assert_eq!(
+        field(
+            &d,
+            "1.21.11",
+            Launcher::Lunar,
+            Loader::None,
+            "minecraft.click_type.quick_move"
+        ),
+        "net/minecraft/world/inventory/ClickType.QUICK_MOVE:Lnet/minecraft/world/inventory/ClickType;"
+    );
+}
