@@ -6,7 +6,8 @@ Minecraft 1.21 and 1.21.11 × standard Vanilla/Fabric/Forge, Lunar and Lunar + F
 
 It is produced by `mc_mappings_generator` (repository `mc_mappings_generator`,
 `consumers/mc_mappings/build-dataset.sh OUT 1`) from the draft Minecraft v1 catalog
-(`consumers/mc_mappings/catalog-v1.json` there), pending the frozen list of mc-bridge ticket B1.
+(`consumers/mc_mappings/catalog-v1.json` there), listed in [spec/catalog.md](../spec/catalog.md).
+Load it with `Dataset::minecraft_v1()`; check it with `cargo run --example audit`.
 Every catalog symbol is resolved and verified in every configuration; identical tables are shared
 (6 profiles for 10 configurations).
 

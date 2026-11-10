@@ -80,7 +80,7 @@ The example in the table format uses synthetic symbols only. It is not the Minec
 
 ## Validation cases
 
-These cases document the full expected behavior. The crate currently implements structural and local validation; selection, resolution, and cross-table auditing remain separate work.
+These cases document the full expected behavior; `Dataset::select`, `Dataset::audit` and the tests in `tests/resolver.rs` and `tests/audit.rs` implement them.
 
 | Case | Expected result |
 | --- | --- |
