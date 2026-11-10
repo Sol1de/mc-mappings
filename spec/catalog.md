@@ -1,16 +1,19 @@
 # Minecraft v1 symbol catalog
 
-`data_version` 1 of the [bundled tables](../data/README.md) declares the symbols below: the
-Minecraft API v1 needed by mc-bridge (session, player, world, entities, inventory and the game
+`data_version` 1 of the [bundled tables](../data/README.md) declares the symbols below: those of
+the first mc-bridge API v1 catalog (session, player, world, entities, inventory and the game
 thread). Every [target configuration](configurations.md) resolves all of them; no configuration
 has partial support.
 
-The list is the union of the symbols required by the frozen mc-bridge API v1
-(`mc_bridge/spec/api-v1.md`, ticket B1), operation by operation. It is maintained as the
-`mc_mappings_generator` input `consumers/mc_mappings/catalog-v1.json`, which names each symbol by
-its Mojang name and its semantic types. Adding, removing or renaming a symbol means editing that
-file, regenerating the tables and publishing a new `data_version`; published identifiers are never
-reused for another meaning.
+The list is the union of the symbols required by the first mc-bridge API v1 catalog (ticket B1),
+operation by operation. That catalog was revised before implementation
+(`mc_bridge/spec/api-v1.md`): its appendix lists the symbols a later `data_version` must add,
+some of which need per-version types or exist in one Minecraft version only (`schema_version` 2).
+The list below is maintained as the `mc_mappings_generator` input
+`consumers/mc_mappings/catalog-v1.json`, which names each symbol by its Mojang name and its
+semantic types. Adding, removing or renaming a symbol means editing that file, regenerating the
+tables and publishing a new `data_version`; published identifiers are never reused for another
+meaning.
 
 | Family | Identifiers |
 | --- | --- |
@@ -23,4 +26,4 @@ reused for another meaning.
 Identifiers are stable across provider renames: `minecraft.resource_location` is Mojang's
 `ResourceLocation` in 1.21 and `Identifier` in 1.21.11, and `minecraft.resource_key.location` is
 `location()` then `identifier()`. Inventory changes go through the game's own mechanism
-(`handle_inventory_mouse_click`), not raw field writes. Network packets are out of v1.
+(`handle_inventory_mouse_click`), not raw field writes. `data_version` 1 has no packet symbols.
