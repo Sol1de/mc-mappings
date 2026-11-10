@@ -1,0 +1,832 @@
+{
+  "catalog_sha256": "3ad64bac8e9e8a80daf4154642f374c09d92a32c4d93c52e9d4cf942b26125a6",
+  "data_version": 1,
+  "generator": "mc_mappings_generator 0.1.0",
+  "inputs": [
+    {
+      "configuration": {
+        "launcher": "lunar",
+        "loader": "fabric",
+        "loader_version": "0.20.1",
+        "minecraft_version": "1.21.11"
+      },
+      "file": "lunar-fabric-0.20.1.json",
+      "provenance": {
+        "coverage": {
+          "classes": 1.0,
+          "fields": 1.0,
+          "methods": 1.0
+        },
+        "generator": "mc_mappings_generator 0.1.0",
+        "runtime_detection": {
+          "classes": "intermediary",
+          "lunar_classpath": [
+            "common-0.1.0-SNAPSHOT-all-nomappings.jar with checksum 743069a",
+            "lunar-platform-mappings-v1_21_11.jar with checksum 302edf01",
+            "lunar-fabric-mixins-0.1.0-SNAPSHOT-all.jar with checksum 1dbd36dd",
+            "lunar-entitytexturefeatures-mixins-0.1.0-SNAPSHOT-all.jar with checksum 5c25de1c",
+            "lunar-flashback-mixins-0.1.0-SNAPSHOT-all.jar with checksum dddc012a",
+            "lunar-modmenu-mixins-0.1.0-SNAPSHOT-all.jar with checksum f1924cc5",
+            "lunar-moreculling-mixins-0.1.0-SNAPSHOT-all.jar with checksum dd942ecb",
+            "lunar-replaymod-fabric-mixins-0.1.0-SNAPSHOT-all.jar with checksum 5919e6f5",
+            "lunar-skyhanni-mixins-0.1.0-SNAPSHOT-all.jar with checksum 4f7aa4ce",
+            "lunar-sodium-mixins-0.1.0-SNAPSHOT-all.jar with checksum ff0e8e53",
+            "lunar-vulkanmod-mixins-0.1.0-SNAPSHOT-all.jar with checksum eb2e0f21",
+            "genesis-0.1.0-SNAPSHOT-all.jar with checksum a425c132",
+            "lunar-lang.jar with checksum bb169f1d",
+            "lunar.jar with checksum bc92bf50",
+            "modern-0.1.0-SNAPSHOT-all-nomappings.jar with checksum cdd2d76d"
+          ],
+          "members": "intermediary",
+          "method": "detected",
+          "verdict": {
+            "class_scores": {
+              "intermediary": 1.0,
+              "mojang": 0.0062,
+              "official": 0.0062,
+              "yarn": 0.0048
+            },
+            "classes": "intermediary",
+            "member_scores": {
+              "intermediary": 1.0,
+              "mojang": 0.0742,
+              "official": 0.0743,
+              "yarn": 0.1669
+            },
+            "members": "intermediary",
+            "method": "detected",
+            "unmatched_classes": 239,
+            "unmatched_members": 0
+          }
+        },
+        "sources": [
+          {
+            "id": "mojang.version",
+            "license": "Mojang",
+            "sha256": "4a59771fce3439436515cc52b3cc685f18c197bb8e73fadd3b29072267a54e3a",
+            "size": 42184,
+            "url": "https://piston-meta.mojang.com/v1/packages/812ee7fdfdf648bb872f7a1dca33718de4e786b4/1.21.11.json"
+          },
+          {
+            "id": "mojang.client",
+            "license": "Mojang (no redistribution)",
+            "sha256": "1473c9489ac50fda3c435049a76a70d61a10b8610db27f5ba9d8756b686cd3bd",
+            "size": 31152600,
+            "url": "https://piston-data.mojang.com/v1/objects/ba2df812c2d12e0219c489c4cd9a5e1f0760f5bd/client.jar"
+          },
+          {
+            "id": "mojang.client_mappings",
+            "license": "Mojang (no redistribution)",
+            "sha256": "517799a8485e107e932dc1bd27c002b2d0b9207eb2396b685bcfe6c3321a9fbd",
+            "size": 11779287,
+            "url": "https://piston-data.mojang.com/v1/objects/031a68bebf55d824f66d6573d8c752f0e1bf232a/client.txt"
+          },
+          {
+            "id": "fabric.intermediary",
+            "license": "CC0-1.0",
+            "sha256": "f45b9530d0becae596fd48743e3ee1733cc2cdc69128cdb7d8d3571de163ab87",
+            "size": 707972,
+            "url": "https://maven.fabricmc.net/net/fabricmc/intermediary/1.21.11/intermediary-1.21.11-v2.jar"
+          },
+          {
+            "id": "fabric.yarn",
+            "license": "CC0-1.0",
+            "sha256": "5c86a80be8842d8cbd72d5d45bcb22838fce1db5fc65133bbd7bc54d6f356db6",
+            "size": 1712478,
+            "url": "https://maven.fabricmc.net/net/fabricmc/yarn/1.21.11+build.6/yarn-1.21.11+build.6-mergedv2.jar"
+          },
+          {
+            "id": "lunar.bake",
+            "license": "Lunar Client (no redistribution)",
+            "sha256": "c6b70dd3a52da4783bf3d4ce16e725327070e18893d6e8413242343e2e66de16",
+            "size": 40272021,
+            "url": "lunar:offline/multiver/cache/914c23a3/840a8562/bake.zip"
+          }
+        ],
+        "verification": {
+          "errors": 0,
+          "warnings": 0
+        }
+      },
+      "sha256": "35696904407639bbbdc1f33d468fdeec5b1f59d4bb13ad6619956a5051e3fcfd"
+    },
+    {
+      "configuration": {
+        "launcher": "lunar",
+        "loader": "lunar",
+        "minecraft_version": "1.21.11"
+      },
+      "file": "lunar-lunar.json",
+      "provenance": {
+        "coverage": {
+          "classes": 1.0,
+          "fields": 1.0,
+          "methods": 1.0
+        },
+        "generator": "mc_mappings_generator 0.1.0",
+        "runtime_detection": {
+          "classes": "mojang",
+          "lunar_classpath": [
+            "common-0.1.0-SNAPSHOT-all-nomappings.jar with checksum 743069a",
+            "lunar-platform-mappings-v1_21_11.jar with checksum 302edf01",
+            "genesis-0.1.0-SNAPSHOT-all.jar with checksum a425c132",
+            "lunar-lang.jar with checksum bb169f1d",
+            "lunar.jar with checksum bc92bf50",
+            "modern-0.1.0-SNAPSHOT-all-nomappings.jar with checksum cdd2d76d"
+          ],
+          "members": "mojang",
+          "method": "detected",
+          "verdict": {
+            "class_scores": {
+              "intermediary": 0.0045,
+              "mojang": 1.0,
+              "official": 0.006,
+              "yarn": 0.0143
+            },
+            "classes": "mojang",
+            "member_scores": {
+              "intermediary": 0.0157,
+              "mojang": 1.0,
+              "official": 0.0769,
+              "yarn": 0.3378
+            },
+            "members": "mojang",
+            "method": "detected",
+            "unmatched_classes": 1,
+            "unmatched_members": 0
+          }
+        },
+        "sources": [
+          {
+            "id": "mojang.version",
+            "license": "Mojang",
+            "sha256": "4a59771fce3439436515cc52b3cc685f18c197bb8e73fadd3b29072267a54e3a",
+            "size": 42184,
+            "url": "https://piston-meta.mojang.com/v1/packages/812ee7fdfdf648bb872f7a1dca33718de4e786b4/1.21.11.json"
+          },
+          {
+            "id": "mojang.client",
+            "license": "Mojang (no redistribution)",
+            "sha256": "1473c9489ac50fda3c435049a76a70d61a10b8610db27f5ba9d8756b686cd3bd",
+            "size": 31152600,
+            "url": "https://piston-data.mojang.com/v1/objects/ba2df812c2d12e0219c489c4cd9a5e1f0760f5bd/client.jar"
+          },
+          {
+            "id": "mojang.client_mappings",
+            "license": "Mojang (no redistribution)",
+            "sha256": "517799a8485e107e932dc1bd27c002b2d0b9207eb2396b685bcfe6c3321a9fbd",
+            "size": 11779287,
+            "url": "https://piston-data.mojang.com/v1/objects/031a68bebf55d824f66d6573d8c752f0e1bf232a/client.txt"
+          },
+          {
+            "id": "fabric.intermediary",
+            "license": "CC0-1.0",
+            "sha256": "f45b9530d0becae596fd48743e3ee1733cc2cdc69128cdb7d8d3571de163ab87",
+            "size": 707972,
+            "url": "https://maven.fabricmc.net/net/fabricmc/intermediary/1.21.11/intermediary-1.21.11-v2.jar"
+          },
+          {
+            "id": "fabric.yarn",
+            "license": "CC0-1.0",
+            "sha256": "5c86a80be8842d8cbd72d5d45bcb22838fce1db5fc65133bbd7bc54d6f356db6",
+            "size": 1712478,
+            "url": "https://maven.fabricmc.net/net/fabricmc/yarn/1.21.11+build.6/yarn-1.21.11+build.6-mergedv2.jar"
+          },
+          {
+            "id": "lunar.bake",
+            "license": "Lunar Client (no redistribution)",
+            "sha256": "1c5cf18835f4c7cf02e0a73bf637c143ffc9162a290427061535d3e9f7060964",
+            "size": 64651559,
+            "url": "lunar:offline/multiver/cache/8d870e69/4a931105/bake.zip"
+          }
+        ],
+        "verification": {
+          "errors": 0,
+          "warnings": 0
+        }
+      },
+      "sha256": "19911eb9d1d07f8b4249966e32ce45cf3d6790a10c98f659eaa1871689021b25"
+    },
+    {
+      "configuration": {
+        "launcher": "official",
+        "loader": "fabric",
+        "loader_version": "0.20.1",
+        "minecraft_version": "1.21.11"
+      },
+      "file": "official-fabric-0.20.1.json",
+      "provenance": {
+        "coverage": {
+          "classes": 1.0,
+          "fields": 1.0,
+          "methods": 1.0
+        },
+        "generator": "mc_mappings_generator 0.1.0",
+        "runtime_detection": {
+          "classes": "intermediary",
+          "evidence": "fabric launch profile libraries: intermediary Some(\"1.21.11\")",
+          "members": "intermediary",
+          "method": "derived"
+        },
+        "sources": [
+          {
+            "id": "mojang.version",
+            "license": "Mojang",
+            "sha256": "4a59771fce3439436515cc52b3cc685f18c197bb8e73fadd3b29072267a54e3a",
+            "size": 42184,
+            "url": "https://piston-meta.mojang.com/v1/packages/812ee7fdfdf648bb872f7a1dca33718de4e786b4/1.21.11.json"
+          },
+          {
+            "id": "mojang.client",
+            "license": "Mojang (no redistribution)",
+            "sha256": "1473c9489ac50fda3c435049a76a70d61a10b8610db27f5ba9d8756b686cd3bd",
+            "size": 31152600,
+            "url": "https://piston-data.mojang.com/v1/objects/ba2df812c2d12e0219c489c4cd9a5e1f0760f5bd/client.jar"
+          },
+          {
+            "id": "mojang.client_mappings",
+            "license": "Mojang (no redistribution)",
+            "sha256": "517799a8485e107e932dc1bd27c002b2d0b9207eb2396b685bcfe6c3321a9fbd",
+            "size": 11779287,
+            "url": "https://piston-data.mojang.com/v1/objects/031a68bebf55d824f66d6573d8c752f0e1bf232a/client.txt"
+          },
+          {
+            "id": "fabric.intermediary",
+            "license": "CC0-1.0",
+            "sha256": "f45b9530d0becae596fd48743e3ee1733cc2cdc69128cdb7d8d3571de163ab87",
+            "size": 707972,
+            "url": "https://maven.fabricmc.net/net/fabricmc/intermediary/1.21.11/intermediary-1.21.11-v2.jar"
+          },
+          {
+            "id": "fabric.yarn",
+            "license": "CC0-1.0",
+            "sha256": "5c86a80be8842d8cbd72d5d45bcb22838fce1db5fc65133bbd7bc54d6f356db6",
+            "size": 1712478,
+            "url": "https://maven.fabricmc.net/net/fabricmc/yarn/1.21.11+build.6/yarn-1.21.11+build.6-mergedv2.jar"
+          },
+          {
+            "id": "fabric.profile",
+            "license": "",
+            "sha256": "514abf0bc92c6a3b86ff037fcda9a10eb51463c5c049cb4d6139dbed7b8ad405",
+            "size": 2865,
+            "url": "https://meta.fabricmc.net/v2/versions/loader/1.21.11/0.20.1/profile/json"
+          }
+        ],
+        "verification": {
+          "errors": 0,
+          "warnings": 0
+        }
+      },
+      "sha256": "7db4fb724d7f5f8fb699221485a49ac3ea943563307716ea3ada24622c1e8d4c"
+    },
+    {
+      "configuration": {
+        "launcher": "official",
+        "loader": "forge",
+        "loader_version": "1.21.11-61.2.4",
+        "minecraft_version": "1.21.11"
+      },
+      "file": "official-forge-1.21.11-61.2.4.json",
+      "provenance": {
+        "coverage": {
+          "classes": 1.0,
+          "fields": 1.0,
+          "methods": 1.0
+        },
+        "generator": "mc_mappings_generator 0.1.0",
+        "runtime_detection": {
+          "classes": "mojang",
+          "evidence": "forge 1.21.11-61.2.4 install_profile.json client processors",
+          "members": "mojang",
+          "method": "derived"
+        },
+        "sources": [
+          {
+            "id": "mojang.version",
+            "license": "Mojang",
+            "sha256": "4a59771fce3439436515cc52b3cc685f18c197bb8e73fadd3b29072267a54e3a",
+            "size": 42184,
+            "url": "https://piston-meta.mojang.com/v1/packages/812ee7fdfdf648bb872f7a1dca33718de4e786b4/1.21.11.json"
+          },
+          {
+            "id": "mojang.client",
+            "license": "Mojang (no redistribution)",
+            "sha256": "1473c9489ac50fda3c435049a76a70d61a10b8610db27f5ba9d8756b686cd3bd",
+            "size": 31152600,
+            "url": "https://piston-data.mojang.com/v1/objects/ba2df812c2d12e0219c489c4cd9a5e1f0760f5bd/client.jar"
+          },
+          {
+            "id": "mojang.client_mappings",
+            "license": "Mojang (no redistribution)",
+            "sha256": "517799a8485e107e932dc1bd27c002b2d0b9207eb2396b685bcfe6c3321a9fbd",
+            "size": 11779287,
+            "url": "https://piston-data.mojang.com/v1/objects/031a68bebf55d824f66d6573d8c752f0e1bf232a/client.txt"
+          },
+          {
+            "id": "fabric.intermediary",
+            "license": "CC0-1.0",
+            "sha256": "f45b9530d0becae596fd48743e3ee1733cc2cdc69128cdb7d8d3571de163ab87",
+            "size": 707972,
+            "url": "https://maven.fabricmc.net/net/fabricmc/intermediary/1.21.11/intermediary-1.21.11-v2.jar"
+          },
+          {
+            "id": "fabric.yarn",
+            "license": "CC0-1.0",
+            "sha256": "5c86a80be8842d8cbd72d5d45bcb22838fce1db5fc65133bbd7bc54d6f356db6",
+            "size": 1712478,
+            "url": "https://maven.fabricmc.net/net/fabricmc/yarn/1.21.11+build.6/yarn-1.21.11+build.6-mergedv2.jar"
+          },
+          {
+            "id": "forge.installer",
+            "license": "LGPL-2.1-only",
+            "sha256": "b1c3ee57baded63f7591293134ff079b69cacef3317d2e6783b28d92cfdc2bf4",
+            "size": 9416490,
+            "url": "https://maven.minecraftforge.net/net/minecraftforge/forge/1.21.11-61.2.4/forge-1.21.11-61.2.4-installer.jar"
+          }
+        ],
+        "verification": {
+          "errors": 0,
+          "warnings": 0
+        }
+      },
+      "sha256": "3b5baf22275e45982e42c5723906b41ee1010802019faaada40b3b81ba4ed32a"
+    },
+    {
+      "configuration": {
+        "launcher": "official",
+        "loader": "vanilla",
+        "minecraft_version": "1.21.11"
+      },
+      "file": "official-vanilla.json",
+      "provenance": {
+        "coverage": {
+          "classes": 1.0,
+          "fields": 1.0,
+          "methods": 1.0
+        },
+        "generator": "mc_mappings_generator 0.1.0",
+        "runtime_detection": {
+          "classes": "official",
+          "evidence": "obfuscated client jar",
+          "members": "official",
+          "method": "derived"
+        },
+        "sources": [
+          {
+            "id": "mojang.version",
+            "license": "Mojang",
+            "sha256": "4a59771fce3439436515cc52b3cc685f18c197bb8e73fadd3b29072267a54e3a",
+            "size": 42184,
+            "url": "https://piston-meta.mojang.com/v1/packages/812ee7fdfdf648bb872f7a1dca33718de4e786b4/1.21.11.json"
+          },
+          {
+            "id": "mojang.client",
+            "license": "Mojang (no redistribution)",
+            "sha256": "1473c9489ac50fda3c435049a76a70d61a10b8610db27f5ba9d8756b686cd3bd",
+            "size": 31152600,
+            "url": "https://piston-data.mojang.com/v1/objects/ba2df812c2d12e0219c489c4cd9a5e1f0760f5bd/client.jar"
+          },
+          {
+            "id": "mojang.client_mappings",
+            "license": "Mojang (no redistribution)",
+            "sha256": "517799a8485e107e932dc1bd27c002b2d0b9207eb2396b685bcfe6c3321a9fbd",
+            "size": 11779287,
+            "url": "https://piston-data.mojang.com/v1/objects/031a68bebf55d824f66d6573d8c752f0e1bf232a/client.txt"
+          },
+          {
+            "id": "fabric.intermediary",
+            "license": "CC0-1.0",
+            "sha256": "f45b9530d0becae596fd48743e3ee1733cc2cdc69128cdb7d8d3571de163ab87",
+            "size": 707972,
+            "url": "https://maven.fabricmc.net/net/fabricmc/intermediary/1.21.11/intermediary-1.21.11-v2.jar"
+          },
+          {
+            "id": "fabric.yarn",
+            "license": "CC0-1.0",
+            "sha256": "5c86a80be8842d8cbd72d5d45bcb22838fce1db5fc65133bbd7bc54d6f356db6",
+            "size": 1712478,
+            "url": "https://maven.fabricmc.net/net/fabricmc/yarn/1.21.11+build.6/yarn-1.21.11+build.6-mergedv2.jar"
+          }
+        ],
+        "verification": {
+          "errors": 0,
+          "warnings": 0
+        }
+      },
+      "sha256": "7bef9669d9e3e6c7ef12711cb119b6d516b288750bafbe0e662d2586bdb53164"
+    },
+    {
+      "configuration": {
+        "launcher": "lunar",
+        "loader": "fabric",
+        "loader_version": "0.20.1",
+        "minecraft_version": "1.21"
+      },
+      "file": "lunar-fabric-0.20.1.json",
+      "provenance": {
+        "coverage": {
+          "classes": 1.0,
+          "fields": 1.0,
+          "methods": 1.0
+        },
+        "generator": "mc_mappings_generator 0.1.0",
+        "runtime_detection": {
+          "classes": "intermediary",
+          "lunar_classpath": [
+            "common-0.1.0-SNAPSHOT-all-nomappings.jar with checksum 743069a",
+            "lunar-platform-mappings-v1_21_0.jar with checksum bcd49680",
+            "lunar-fabric-mixins-0.1.0-SNAPSHOT-all.jar with checksum 1dbd36dd",
+            "lunar-entitytexturefeatures-mixins-0.1.0-SNAPSHOT-all.jar with checksum 5c25de1c",
+            "lunar-ferrite-core-mixins-0.1.0-SNAPSHOT-all.jar with checksum 8534d72",
+            "lunar-flashback-mixins-0.1.0-SNAPSHOT-all.jar with checksum dddc012a",
+            "lunar-lithium-mixins-0.1.0-SNAPSHOT-all.jar with checksum 7946afd0",
+            "lunar-modmenu-mixins-0.1.0-SNAPSHOT-all.jar with checksum f1924cc5",
+            "lunar-moreculling-mixins-0.1.0-SNAPSHOT-all.jar with checksum dd942ecb",
+            "lunar-noxesium-mixins-0.1.0-SNAPSHOT-all.jar with checksum 5c7f04d7",
+            "lunar-replaymod-fabric-mixins-0.1.0-SNAPSHOT-all.jar with checksum 5919e6f5",
+            "lunar-sodium-mixins-0.1.0-SNAPSHOT-all.jar with checksum ff0e8e53",
+            "genesis-0.1.0-SNAPSHOT-all.jar with checksum a425c132",
+            "lunar-lang.jar with checksum bb169f1d",
+            "lunar.jar with checksum bc92bf50",
+            "modern-0.1.0-SNAPSHOT-all-nomappings.jar with checksum cdd2d76d"
+          ],
+          "members": "intermediary",
+          "method": "detected",
+          "verdict": {
+            "class_scores": {
+              "intermediary": 1.0,
+              "mojang": 0.003,
+              "official": 0.003,
+              "yarn": 0.0023
+            },
+            "classes": "intermediary",
+            "member_scores": {
+              "intermediary": 1.0,
+              "mojang": 0.0613,
+              "official": 0.0613,
+              "yarn": 0.1679
+            },
+            "members": "intermediary",
+            "method": "detected",
+            "unmatched_classes": 182,
+            "unmatched_members": 0
+          }
+        },
+        "sources": [
+          {
+            "id": "mojang.version",
+            "license": "Mojang",
+            "sha256": "07bf3e965654a12356229a70a0330317b6e021cdcebf8cf4295c299b0bf511ba",
+            "size": 38401,
+            "url": "https://piston-meta.mojang.com/v1/packages/4fc7dfb1d245736485d1f0e9c7a41c0273ad8638/1.21.json"
+          },
+          {
+            "id": "mojang.client",
+            "license": "Mojang (no redistribution)",
+            "sha256": "4b56bc9b44de7e88f9fbb52e716c18240da34469fcbafa5ed2e75b04d60617e8",
+            "size": 26836080,
+            "url": "https://piston-data.mojang.com/v1/objects/0e9a07b9bb3390602f977073aa12884a4ce12431/client.jar"
+          },
+          {
+            "id": "mojang.client_mappings",
+            "license": "Mojang (no redistribution)",
+            "sha256": "127485d79248d4ae2955a7d061c3626d38853ecb054c4d008707732264b0aac1",
+            "size": 9597156,
+            "url": "https://piston-data.mojang.com/v1/objects/0530a206839eb1e9b35ec86acbbe394b07a2d9fb/client.txt"
+          },
+          {
+            "id": "fabric.intermediary",
+            "license": "CC0-1.0",
+            "sha256": "5567849f76f552ec3dac68bbb1da92d345e588bc28416cc176bfb9dda1bfd1ec",
+            "size": 582846,
+            "url": "https://maven.fabricmc.net/net/fabricmc/intermediary/1.21/intermediary-1.21-v2.jar"
+          },
+          {
+            "id": "fabric.yarn",
+            "license": "CC0-1.0",
+            "sha256": "543821c216cfdf35549b19c40852d317f4448e2b7c8a39f87da8f482b752aeed",
+            "size": 1462928,
+            "url": "https://maven.fabricmc.net/net/fabricmc/yarn/1.21+build.9/yarn-1.21+build.9-mergedv2.jar"
+          },
+          {
+            "id": "lunar.bake",
+            "license": "Lunar Client (no redistribution)",
+            "sha256": "6c6faafc2e32c8ed9abe39da67e3bc3b40f9dcb1030db6ef4fda1b62ada17457",
+            "size": 36994474,
+            "url": "lunar:offline/multiver/cache/b7f47949/f89810f7/bake.zip"
+          }
+        ],
+        "verification": {
+          "errors": 0,
+          "warnings": 0
+        }
+      },
+      "sha256": "1e8a8ccb49d451c8fc9abb2d8e98200312ee5362e2fb8f7c344e8a8eb5621f81"
+    },
+    {
+      "configuration": {
+        "launcher": "lunar",
+        "loader": "lunar",
+        "minecraft_version": "1.21"
+      },
+      "file": "lunar-lunar.json",
+      "provenance": {
+        "coverage": {
+          "classes": 1.0,
+          "fields": 1.0,
+          "methods": 1.0
+        },
+        "generator": "mc_mappings_generator 0.1.0",
+        "runtime_detection": {
+          "classes": "mojang",
+          "lunar_classpath": [
+            "common-0.1.0-SNAPSHOT-all-nomappings.jar with checksum 743069a",
+            "lunar-platform-mappings-v1_21_0.jar with checksum bcd49680",
+            "genesis-0.1.0-SNAPSHOT-all.jar with checksum a425c132",
+            "lunar-lang.jar with checksum bb169f1d",
+            "lunar.jar with checksum bc92bf50",
+            "modern-0.1.0-SNAPSHOT-all-nomappings.jar with checksum cdd2d76d"
+          ],
+          "members": "mojang",
+          "method": "detected",
+          "verdict": {
+            "class_scores": {
+              "intermediary": 0.0021,
+              "mojang": 1.0,
+              "official": 0.0031,
+              "yarn": 0.0097
+            },
+            "classes": "mojang",
+            "member_scores": {
+              "intermediary": 0.0163,
+              "mojang": 1.0,
+              "official": 0.0648,
+              "yarn": 0.3274
+            },
+            "members": "mojang",
+            "method": "detected",
+            "unmatched_classes": 2,
+            "unmatched_members": 0
+          }
+        },
+        "sources": [
+          {
+            "id": "mojang.version",
+            "license": "Mojang",
+            "sha256": "07bf3e965654a12356229a70a0330317b6e021cdcebf8cf4295c299b0bf511ba",
+            "size": 38401,
+            "url": "https://piston-meta.mojang.com/v1/packages/4fc7dfb1d245736485d1f0e9c7a41c0273ad8638/1.21.json"
+          },
+          {
+            "id": "mojang.client",
+            "license": "Mojang (no redistribution)",
+            "sha256": "4b56bc9b44de7e88f9fbb52e716c18240da34469fcbafa5ed2e75b04d60617e8",
+            "size": 26836080,
+            "url": "https://piston-data.mojang.com/v1/objects/0e9a07b9bb3390602f977073aa12884a4ce12431/client.jar"
+          },
+          {
+            "id": "mojang.client_mappings",
+            "license": "Mojang (no redistribution)",
+            "sha256": "127485d79248d4ae2955a7d061c3626d38853ecb054c4d008707732264b0aac1",
+            "size": 9597156,
+            "url": "https://piston-data.mojang.com/v1/objects/0530a206839eb1e9b35ec86acbbe394b07a2d9fb/client.txt"
+          },
+          {
+            "id": "fabric.intermediary",
+            "license": "CC0-1.0",
+            "sha256": "5567849f76f552ec3dac68bbb1da92d345e588bc28416cc176bfb9dda1bfd1ec",
+            "size": 582846,
+            "url": "https://maven.fabricmc.net/net/fabricmc/intermediary/1.21/intermediary-1.21-v2.jar"
+          },
+          {
+            "id": "fabric.yarn",
+            "license": "CC0-1.0",
+            "sha256": "543821c216cfdf35549b19c40852d317f4448e2b7c8a39f87da8f482b752aeed",
+            "size": 1462928,
+            "url": "https://maven.fabricmc.net/net/fabricmc/yarn/1.21+build.9/yarn-1.21+build.9-mergedv2.jar"
+          },
+          {
+            "id": "lunar.bake",
+            "license": "Lunar Client (no redistribution)",
+            "sha256": "7b4c7b1802610841549ac9d96abc1c101318aaa84ed2690b777459f4d57bce9b",
+            "size": 57319289,
+            "url": "lunar:offline/multiver/cache/d2ca4957/8b993358/bake.zip"
+          }
+        ],
+        "verification": {
+          "errors": 0,
+          "warnings": 0
+        }
+      },
+      "sha256": "e21bd36099d48207efc4e1fa369fe02931e44caf66d2183ef56bb2a0103e8bad"
+    },
+    {
+      "configuration": {
+        "launcher": "official",
+        "loader": "fabric",
+        "loader_version": "0.20.1",
+        "minecraft_version": "1.21"
+      },
+      "file": "official-fabric-0.20.1.json",
+      "provenance": {
+        "coverage": {
+          "classes": 1.0,
+          "fields": 1.0,
+          "methods": 1.0
+        },
+        "generator": "mc_mappings_generator 0.1.0",
+        "runtime_detection": {
+          "classes": "intermediary",
+          "evidence": "fabric launch profile libraries: intermediary Some(\"1.21\")",
+          "members": "intermediary",
+          "method": "derived"
+        },
+        "sources": [
+          {
+            "id": "mojang.version",
+            "license": "Mojang",
+            "sha256": "07bf3e965654a12356229a70a0330317b6e021cdcebf8cf4295c299b0bf511ba",
+            "size": 38401,
+            "url": "https://piston-meta.mojang.com/v1/packages/4fc7dfb1d245736485d1f0e9c7a41c0273ad8638/1.21.json"
+          },
+          {
+            "id": "mojang.client",
+            "license": "Mojang (no redistribution)",
+            "sha256": "4b56bc9b44de7e88f9fbb52e716c18240da34469fcbafa5ed2e75b04d60617e8",
+            "size": 26836080,
+            "url": "https://piston-data.mojang.com/v1/objects/0e9a07b9bb3390602f977073aa12884a4ce12431/client.jar"
+          },
+          {
+            "id": "mojang.client_mappings",
+            "license": "Mojang (no redistribution)",
+            "sha256": "127485d79248d4ae2955a7d061c3626d38853ecb054c4d008707732264b0aac1",
+            "size": 9597156,
+            "url": "https://piston-data.mojang.com/v1/objects/0530a206839eb1e9b35ec86acbbe394b07a2d9fb/client.txt"
+          },
+          {
+            "id": "fabric.intermediary",
+            "license": "CC0-1.0",
+            "sha256": "5567849f76f552ec3dac68bbb1da92d345e588bc28416cc176bfb9dda1bfd1ec",
+            "size": 582846,
+            "url": "https://maven.fabricmc.net/net/fabricmc/intermediary/1.21/intermediary-1.21-v2.jar"
+          },
+          {
+            "id": "fabric.yarn",
+            "license": "CC0-1.0",
+            "sha256": "543821c216cfdf35549b19c40852d317f4448e2b7c8a39f87da8f482b752aeed",
+            "size": 1462928,
+            "url": "https://maven.fabricmc.net/net/fabricmc/yarn/1.21+build.9/yarn-1.21+build.9-mergedv2.jar"
+          },
+          {
+            "id": "fabric.profile",
+            "license": "",
+            "sha256": "3da8f2211405d1d8df8dc0f1a68d06c5a244fe0ffd1aef33829aec1d531ea11d",
+            "size": 2856,
+            "url": "https://meta.fabricmc.net/v2/versions/loader/1.21/0.20.1/profile/json"
+          }
+        ],
+        "verification": {
+          "errors": 0,
+          "warnings": 0
+        }
+      },
+      "sha256": "8ba4dcc7d5c84cb2f12249e34e38f6ea166f8bed2646b5b3deaaabb7f67e7416"
+    },
+    {
+      "configuration": {
+        "launcher": "official",
+        "loader": "forge",
+        "loader_version": "1.21-51.0.33",
+        "minecraft_version": "1.21"
+      },
+      "file": "official-forge-1.21-51.0.33.json",
+      "provenance": {
+        "coverage": {
+          "classes": 1.0,
+          "fields": 1.0,
+          "methods": 1.0
+        },
+        "generator": "mc_mappings_generator 0.1.0",
+        "runtime_detection": {
+          "classes": "mojang",
+          "evidence": "forge 1.21-51.0.33 install_profile.json client processors",
+          "members": "mojang",
+          "method": "derived"
+        },
+        "sources": [
+          {
+            "id": "mojang.version",
+            "license": "Mojang",
+            "sha256": "07bf3e965654a12356229a70a0330317b6e021cdcebf8cf4295c299b0bf511ba",
+            "size": 38401,
+            "url": "https://piston-meta.mojang.com/v1/packages/4fc7dfb1d245736485d1f0e9c7a41c0273ad8638/1.21.json"
+          },
+          {
+            "id": "mojang.client",
+            "license": "Mojang (no redistribution)",
+            "sha256": "4b56bc9b44de7e88f9fbb52e716c18240da34469fcbafa5ed2e75b04d60617e8",
+            "size": 26836080,
+            "url": "https://piston-data.mojang.com/v1/objects/0e9a07b9bb3390602f977073aa12884a4ce12431/client.jar"
+          },
+          {
+            "id": "mojang.client_mappings",
+            "license": "Mojang (no redistribution)",
+            "sha256": "127485d79248d4ae2955a7d061c3626d38853ecb054c4d008707732264b0aac1",
+            "size": 9597156,
+            "url": "https://piston-data.mojang.com/v1/objects/0530a206839eb1e9b35ec86acbbe394b07a2d9fb/client.txt"
+          },
+          {
+            "id": "fabric.intermediary",
+            "license": "CC0-1.0",
+            "sha256": "5567849f76f552ec3dac68bbb1da92d345e588bc28416cc176bfb9dda1bfd1ec",
+            "size": 582846,
+            "url": "https://maven.fabricmc.net/net/fabricmc/intermediary/1.21/intermediary-1.21-v2.jar"
+          },
+          {
+            "id": "fabric.yarn",
+            "license": "CC0-1.0",
+            "sha256": "543821c216cfdf35549b19c40852d317f4448e2b7c8a39f87da8f482b752aeed",
+            "size": 1462928,
+            "url": "https://maven.fabricmc.net/net/fabricmc/yarn/1.21+build.9/yarn-1.21+build.9-mergedv2.jar"
+          },
+          {
+            "id": "forge.installer",
+            "license": "LGPL-2.1-only",
+            "sha256": "e59cbc05af015b2e6c083703a60f931b88e931f14cc9c97c401d4f72fc14e1ec",
+            "size": 6246566,
+            "url": "https://maven.minecraftforge.net/net/minecraftforge/forge/1.21-51.0.33/forge-1.21-51.0.33-installer.jar"
+          }
+        ],
+        "verification": {
+          "errors": 0,
+          "warnings": 0
+        }
+      },
+      "sha256": "f3c61fdaf759627b26008030d32f4bce1ca6575591e50cbae3c0b17efc07618f"
+    },
+    {
+      "configuration": {
+        "launcher": "official",
+        "loader": "vanilla",
+        "minecraft_version": "1.21"
+      },
+      "file": "official-vanilla.json",
+      "provenance": {
+        "coverage": {
+          "classes": 1.0,
+          "fields": 1.0,
+          "methods": 1.0
+        },
+        "generator": "mc_mappings_generator 0.1.0",
+        "runtime_detection": {
+          "classes": "official",
+          "evidence": "obfuscated client jar",
+          "members": "official",
+          "method": "derived"
+        },
+        "sources": [
+          {
+            "id": "mojang.version",
+            "license": "Mojang",
+            "sha256": "07bf3e965654a12356229a70a0330317b6e021cdcebf8cf4295c299b0bf511ba",
+            "size": 38401,
+            "url": "https://piston-meta.mojang.com/v1/packages/4fc7dfb1d245736485d1f0e9c7a41c0273ad8638/1.21.json"
+          },
+          {
+            "id": "mojang.client",
+            "license": "Mojang (no redistribution)",
+            "sha256": "4b56bc9b44de7e88f9fbb52e716c18240da34469fcbafa5ed2e75b04d60617e8",
+            "size": 26836080,
+            "url": "https://piston-data.mojang.com/v1/objects/0e9a07b9bb3390602f977073aa12884a4ce12431/client.jar"
+          },
+          {
+            "id": "mojang.client_mappings",
+            "license": "Mojang (no redistribution)",
+            "sha256": "127485d79248d4ae2955a7d061c3626d38853ecb054c4d008707732264b0aac1",
+            "size": 9597156,
+            "url": "https://piston-data.mojang.com/v1/objects/0530a206839eb1e9b35ec86acbbe394b07a2d9fb/client.txt"
+          },
+          {
+            "id": "fabric.intermediary",
+            "license": "CC0-1.0",
+            "sha256": "5567849f76f552ec3dac68bbb1da92d345e588bc28416cc176bfb9dda1bfd1ec",
+            "size": 582846,
+            "url": "https://maven.fabricmc.net/net/fabricmc/intermediary/1.21/intermediary-1.21-v2.jar"
+          },
+          {
+            "id": "fabric.yarn",
+            "license": "CC0-1.0",
+            "sha256": "543821c216cfdf35549b19c40852d317f4448e2b7c8a39f87da8f482b752aeed",
+            "size": 1462928,
+            "url": "https://maven.fabricmc.net/net/fabricmc/yarn/1.21+build.9/yarn-1.21+build.9-mergedv2.jar"
+          }
+        ],
+        "verification": {
+          "errors": 0,
+          "warnings": 0
+        }
+      },
+      "sha256": "bac9822edad639481d22748a2db94b72bf7127b3d83e6e563a71d03e85c6f256"
+    }
+  ]
+}

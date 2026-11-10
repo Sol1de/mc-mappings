@@ -7,11 +7,12 @@
 - [Sources, evidence, and limitations](references.md).
 - [Resolution model and identifiers](model.md).
 - [Table format](table-format.md).
+- [Minecraft v1 symbol catalog](catalog.md).
 
 Implementation and validation progress is tracked in tickets and issues. These documents define the intended coverage without duplicating progress tracking.
 
 The Rust model and structural/local JSON validation are implemented in the crate.
-Cross-table auditing, resolution, and production mapping tables are not provided yet.
+Selection and resolution (`Dataset::select`), the cross-table audit (`Dataset::audit`) and the Minecraft v1 tables (`data/minecraft-v1.json`, see [catalog](catalog.md)) are implemented.
 
 ## Scope
 

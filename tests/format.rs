@@ -367,7 +367,7 @@ fn array_dimensions_are_bounded_during_parsing() {
 }
 
 #[test]
-fn cross_table_auditing_is_explicitly_deferred() {
+fn cross_table_auditing_is_separate_from_parsing() {
     let mut data = fixture();
     data["profiles"][0]["classes"] = json!([]);
     data["catalog"]["methods"] = json!(["example.client", "example.client"]);
@@ -377,6 +377,7 @@ fn cross_table_auditing_is_explicitly_deferred() {
         .unwrap()
         .push(duplicate);
     assert!(parse(&data).is_ok());
+    assert!(!parse(&data).unwrap().audit().is_ok());
     let empty = json!({"schema_version":1, "data_version":1, "catalog":{"classes":[], "fields":[], "methods":[]}, "configurations":[], "profiles":[]});
     assert!(parse(&empty).is_ok());
 }
