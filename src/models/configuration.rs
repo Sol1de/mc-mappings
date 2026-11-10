@@ -8,6 +8,15 @@ pub enum Launcher {
     Lunar,
 }
 
+impl Launcher {
+    pub fn as_str(self) -> &'static str {
+        match self {
+            Self::Standard => "standard",
+            Self::Lunar => "lunar",
+        }
+    }
+}
+
 impl TryFrom<String> for Launcher {
     type Error = String;
 
@@ -26,6 +35,16 @@ pub enum Loader {
     None,
     Fabric,
     Forge,
+}
+
+impl Loader {
+    pub fn as_str(self) -> &'static str {
+        match self {
+            Self::None => "none",
+            Self::Fabric => "fabric",
+            Self::Forge => "forge",
+        }
+    }
 }
 
 impl TryFrom<String> for Loader {
