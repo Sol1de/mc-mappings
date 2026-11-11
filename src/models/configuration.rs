@@ -3,6 +3,7 @@ use serde::Deserialize;
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, Deserialize)]
 #[serde(try_from = "String")]
+#[non_exhaustive]
 pub enum Launcher {
     Standard,
     Lunar,
@@ -31,6 +32,7 @@ impl TryFrom<String> for Launcher {
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, Deserialize)]
 #[serde(try_from = "String")]
+#[non_exhaustive]
 pub enum Loader {
     None,
     Fabric,

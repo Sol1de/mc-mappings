@@ -157,3 +157,43 @@ fn missing_and_unknown_symbols_are_errors() {
         Err(ResolveError::InvalidData(_))
     ));
 }
+
+/// The fixture in schema 2: `find_by_index` exists in 1.21 only, 1.21.11 has its own profile.
+fn scoped() -> Value {
+    let mut data = fixture();
+    data["schema_version"] = json!(2);
+    data["catalog"]["scoped"] =
+        json!([{"id": "example.client.find_by_index", "minecraft_versions": ["1.21"]}]);
+    let mut newer = data["profiles"][0].clone();
+    newer["profile_id"] = json!("example.newer");
+    newer["methods"].as_array_mut().unwrap().pop();
+    data["profiles"].as_array_mut().unwrap().push(newer);
+    data["configurations"].as_array_mut().unwrap().push(json!({
+        "minecraft_version": "1.21.11", "launcher": "standard", "loader": "none",
+        "profile_id": "example.newer"
+    }));
+    data
+}
+
+#[test]
+fn version_scoped_symbols_resolve_only_in_their_versions() {
+    let d = parse(&scoped());
+    let id: MethodId = "example.client.find_by_index".parse().unwrap();
+    let older = d.select("1.21", Launcher::Standard, Loader::None).unwrap();
+    assert!(older.method(&id).is_ok());
+    let newer = d
+        .select("1.21.11", Launcher::Standard, Loader::None)
+        .unwrap();
+    assert_eq!(
+        newer.method(&id),
+        Err(ResolveError::AbsentInVersion {
+            symbol: id.to_string(),
+            minecraft_version: "1.21.11".into()
+        })
+    );
+    assert!(
+        newer
+            .method(&"example.client.find".parse().unwrap())
+            .is_ok()
+    );
+}

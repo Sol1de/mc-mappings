@@ -44,7 +44,7 @@ Each identifier occurs once across the entire semantic catalog, including across
 
 Each method overload receives its own semantic identifier. A lookup requires the identifier of the intended overload; there is no lookup by a bare runtime method name. Identifiers remain stable when a provider renames a symbol. Changes in behavior or API semantics are handled by consuming layers rather than hidden in a mapping.
 
-The catalog declares the symbols required in this dataset. Every profile must cover it completely. Runtime declaring classes, names, static/instance status, and signatures are recorded per profile because they may differ across configurations. Shared tables are allowed; partial support is not silently substituted for required symbols.
+The catalog declares the symbols required in this dataset. A symbol may be limited to some Minecraft versions, when the game has it only there; every other symbol exists in all of them. Every profile must cover completely the symbols of its Minecraft versions. Resolving a symbol in a version that does not have it is a distinct error, not an unknown symbol. Runtime declaring classes, names, static/instance status, and signatures are recorded per profile because they may differ across configurations. Shared tables are allowed; partial support is not silently substituted for required symbols.
 
 ## Types and signatures
 
@@ -65,7 +65,7 @@ The resolver translates mapped class references throughout signatures, including
 | Version | Responsibility |
 | --- | --- |
 | Crate version | The library release and its public API; recorded by the package, not duplicated in each table |
-| `schema_version` | The serialized structure and interpretation rules; initially integer `1` |
+| `schema_version` | The serialized structure and interpretation rules; integer `2` (`1` before version-scoped symbols) |
 | `data_version` | A positive, monotonically increasing integer identifying a published dataset revision, independently of the crate version |
 
 A published `data_version` is immutable. Any change to the catalog, registry, or profiles requires a new value. A format change also requires a new `schema_version`. A crate may be released without changing its data; changing data requires publishing a crate release containing that new dataset. Minecraft versions are separate from all three values.
@@ -91,6 +91,7 @@ These cases document the full expected behavior; `Dataset::select`, `Dataset::au
 | Missing launcher/loader combination | Unsupported configuration |
 | Invalid semantic identifier | Invalid identifier |
 | Duplicate catalog ID or configuration tuple | Invalid data |
+| Catalog symbol resolved in a Minecraft version it is not scoped to | Absent in this version |
 | Missing profile, symbol, declaring class, or mapped type reference | Invalid data |
 | Two methods with the same owner, runtime name, and complete runtime descriptor | Invalid data: ambiguous runtime mapping |
 | Unsupported schema or malformed table structure | Invalid data; never interpret as a different schema |
