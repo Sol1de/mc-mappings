@@ -1,6 +1,6 @@
 {
-  "catalog_sha256": "3ad64bac8e9e8a80daf4154642f374c09d92a32c4d93c52e9d4cf942b26125a6",
-  "data_version": 1,
+  "catalog_sha256": "31d8bd773ee7165647032d8f90e2363ee046a2d41783194306c2981107a740b6",
+  "data_version": 2,
   "generator": "mc_mappings_generator 0.1.0",
   "inputs": [
     {

@@ -30,7 +30,7 @@ mod method;
 mod profile;
 mod validation;
 
-pub use catalog::Catalog;
+pub use catalog::{Catalog, VersionScope};
 pub use class::Class;
 pub use configuration::{Configuration, Launcher, Loader};
 pub use dataset::{Dataset, SCHEMA_VERSION};

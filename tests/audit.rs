@@ -153,3 +153,60 @@ fn report_serializes_for_ci() {
     assert_eq!(json["configurations"][0]["launcher"], "standard");
     assert!(json["problems"].as_array().unwrap().len() >= 2);
 }
+
+/// The fixture in schema 2: `find_by_index` exists in 1.21 only, 1.21.11 has its own profile.
+fn scoped() -> Value {
+    let mut data = fixture();
+    data["schema_version"] = json!(2);
+    data["catalog"]["scoped"] =
+        json!([{"id": "example.client.find_by_index", "minecraft_versions": ["1.21"]}]);
+    let mut newer = data["profiles"][0].clone();
+    newer["profile_id"] = json!("example.newer");
+    newer["methods"].as_array_mut().unwrap().pop();
+    data["profiles"].as_array_mut().unwrap().push(newer);
+    data["configurations"].as_array_mut().unwrap().push(json!({
+        "minecraft_version": "1.21.11", "launcher": "standard", "loader": "none",
+        "profile_id": "example.newer"
+    }));
+    data
+}
+
+#[test]
+fn version_scopes_are_audited() {
+    let report = Dataset::from_json(&scoped().to_string()).unwrap().audit();
+    assert!(report.is_ok(), "{report:#?}");
+    assert_eq!(
+        (
+            report.configurations[0].methods,
+            report.configurations[1].methods
+        ),
+        (2, 1)
+    );
+    let symbol = Some("example.client.find_by_index");
+    // A record for a symbol that does not exist in the profile's version.
+    let mut bad = scoped();
+    let extra = bad["profiles"][0]["methods"][1].clone();
+    bad["profiles"][1]["methods"]
+        .as_array_mut()
+        .unwrap()
+        .push(extra);
+    assert!(has(&problems(&bad), symbol, "not in the catalog"));
+    // No record where the symbol exists.
+    let mut bad = scoped();
+    bad["profiles"][0]["methods"].as_array_mut().unwrap().pop();
+    assert!(has(&problems(&bad), symbol, "missing method record"));
+    // One profile for two versions that do not have the same symbols.
+    let mut bad = scoped();
+    bad["configurations"][1]["profile_id"] = json!("example.standard");
+    assert!(has(&problems(&bad), symbol, "does not always exist"));
+    // Repeated scope, and scope for an identifier outside the catalog.
+    let mut bad = scoped();
+    let scope = bad["catalog"]["scoped"][0].clone();
+    bad["catalog"]["scoped"].as_array_mut().unwrap().extend([
+        scope,
+        json!({"id": "example.unknown", "minecraft_versions": ["1.21"]}),
+    ]);
+    let found = problems(&bad);
+    assert!(has(&found, symbol, "several version scopes"));
+    assert!(has(&found, Some("example.unknown"), "not in the catalog"));
+}

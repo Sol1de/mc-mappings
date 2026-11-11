@@ -84,7 +84,7 @@ fn synthetic_spec_example_and_distinct_profiles() {
 #[test]
 fn json_requires_exact_fields_and_types() {
     let cases = [
-        ("/schema_version", json!(2)),
+        ("/schema_version", json!(3)),
         ("/schema_version", json!(1.0)),
         ("/schema_version", json!("1")),
         ("/data_version", json!(0)),
@@ -380,4 +380,20 @@ fn cross_table_auditing_is_separate_from_parsing() {
     assert!(!parse(&data).unwrap().audit().is_ok());
     let empty = json!({"schema_version":1, "data_version":1, "catalog":{"classes":[], "fields":[], "methods":[]}, "configurations":[], "profiles":[]});
     assert!(parse(&empty).is_ok());
+}
+
+#[test]
+fn version_scopes_need_schema_2_and_canonical_versions() {
+    let mut data = fixture();
+    data["catalog"]["scoped"] =
+        json!([{"id": "example.client.counter", "minecraft_versions": ["1.21"]}]);
+    assert!(parse(&data).is_err(), "schema 1 has no version scopes");
+    data["schema_version"] = json!(2);
+    assert_eq!(parse(&data).unwrap().catalog.scoped.len(), 1);
+    for versions in [json!([]), json!(["1.21.1"]), json!("1.21")] {
+        data["catalog"]["scoped"][0]["minecraft_versions"] = versions;
+        assert!(parse(&data).is_err(), "{data}");
+    }
+    data["catalog"]["scoped"] = json!([{"id": "example.client.counter"}]);
+    assert!(parse(&data).is_err());
 }

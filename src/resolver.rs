@@ -10,6 +10,7 @@ use crate::{
 use std::{error::Error, fmt};
 
 #[derive(Clone, Debug, PartialEq, Eq)]
+#[non_exhaustive]
 pub enum ResolveError {
     /// No registry entry for this exact configuration: unlisted version (stable or not),
     /// snapshot, pre-release, or missing launcher/loader combination.
@@ -20,6 +21,11 @@ pub enum ResolveError {
     },
     /// The identifier is not declared by the catalog.
     UnknownSymbol(String),
+    /// The catalog declares the symbol, but it does not exist in this Minecraft version.
+    AbsentInVersion {
+        symbol: String,
+        minecraft_version: String,
+    },
     /// The data is inconsistent: duplicate registry entry, missing profile, symbol, owner or
     /// mapped type reference. Run [`Dataset::audit`] for every problem at once.
     InvalidData(String),
@@ -39,6 +45,13 @@ impl fmt::Display for ResolveError {
                 loader.as_str()
             ),
             Self::UnknownSymbol(id) => write!(f, "unknown symbol {id}"),
+            Self::AbsentInVersion {
+                symbol,
+                minecraft_version,
+            } => write!(
+                f,
+                "{symbol} does not exist in Minecraft {minecraft_version}"
+            ),
             Self::InvalidData(message) => write!(f, "invalid data: {message}"),
         }
     }
@@ -142,10 +155,24 @@ impl<'a> Selection<'a> {
         self.profile.profile_id.as_str()
     }
 
+    /// Fails for a catalog symbol scoped to other Minecraft versions than the selected one.
+    fn present(&self, id: &str) -> Result<(), ResolveError> {
+        let version = &self.configuration.minecraft_version;
+        if self.dataset.catalog.exists_in(id, version) {
+            Ok(())
+        } else {
+            Err(ResolveError::AbsentInVersion {
+                symbol: id.to_owned(),
+                minecraft_version: version.clone(),
+            })
+        }
+    }
+
     pub fn class(&self, id: &ClassId) -> Result<ResolvedClass<'a>, ResolveError> {
         if !self.dataset.catalog.classes.contains(id) {
             return Err(ResolveError::UnknownSymbol(id.to_string()));
         }
+        self.present(id.as_str())?;
         let record = self
             .profile
             .classes
@@ -171,6 +198,9 @@ impl<'a> Selection<'a> {
                             ResolveError::UnknownSymbol(_) => {
                                 invalid(format!("type references undeclared class {id}"))
                             }
+                            ResolveError::AbsentInVersion { .. } => invalid(format!(
+                                "type references class {id}, absent in this Minecraft version"
+                            )),
                             other => other,
                         })?
                         .runtime_name,
@@ -210,6 +240,7 @@ impl<'a> Selection<'a> {
         if !self.dataset.catalog.fields.contains(id) {
             return Err(ResolveError::UnknownSymbol(id.to_string()));
         }
+        self.present(id.as_str())?;
         let record = self
             .profile
             .fields
@@ -229,6 +260,7 @@ impl<'a> Selection<'a> {
         if !self.dataset.catalog.methods.contains(id) {
             return Err(ResolveError::UnknownSymbol(id.to_string()));
         }
+        self.present(id.as_str())?;
         let record = self
             .profile
             .methods

@@ -4,7 +4,8 @@ use crate::Type;
 use serde::Deserialize;
 use std::num::NonZeroU64;
 
-pub const SCHEMA_VERSION: u64 = 1;
+/// The current schema. Schema 1 (no version-scoped symbols) is still read.
+pub const SCHEMA_VERSION: u64 = 2;
 
 #[derive(Clone, Debug, PartialEq, Eq, Deserialize)]
 #[serde(try_from = "RawDataset")]
@@ -59,14 +60,28 @@ impl Dataset {
     /// Does not check cross-table references, uniqueness or catalog coverage.
     pub fn validate(&self) -> Result<(), ValidationError> {
         require(
-            self.schema_version == SCHEMA_VERSION,
+            matches!(self.schema_version, 1 | SCHEMA_VERSION),
             "unsupported schema_version",
         )?;
-        for configuration in &self.configurations {
+        require(
+            self.schema_version > 1 || self.catalog.scoped.is_empty(),
+            "version-scoped symbols need schema_version 2",
+        )?;
+        let in_scope = |version: &String| {
             require(
-                matches!(configuration.minecraft_version.as_str(), "1.21" | "1.21.11"),
+                matches!(version.as_str(), "1.21" | "1.21.11"),
                 "stored minecraft_version must be canonical and within the approved scope",
+            )
+        };
+        for scope in &self.catalog.scoped {
+            require(
+                !scope.minecraft_versions.is_empty(),
+                "a version scope must list at least one Minecraft version",
             )?;
+            scope.minecraft_versions.iter().try_for_each(in_scope)?;
+        }
+        for configuration in &self.configurations {
+            in_scope(&configuration.minecraft_version)?;
             require(
                 !(configuration.launcher == Launcher::Lunar
                     && configuration.loader == Loader::Forge),
