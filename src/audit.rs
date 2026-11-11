@@ -25,17 +25,19 @@ pub struct ConfigurationCoverage {
     pub launcher: &'static str,
     pub loader: &'static str,
     pub profile_id: String,
-    /// Required symbols resolved through [`Dataset::select`], per kind.
+    /// Catalog symbols of this Minecraft version resolved through [`Dataset::select`], per kind.
     pub classes: usize,
     pub fields: usize,
     pub methods: usize,
-    /// Every catalog symbol resolves.
+    /// Every catalog symbol that exists in this Minecraft version resolves.
     pub complete: bool,
 }
 
 #[derive(Clone, Debug, Default, PartialEq, Eq, Serialize)]
 pub struct AuditReport {
     pub data_version: u64,
+    /// Catalog classes, fields and methods. A configuration resolves fewer when some symbols
+    /// exist only in other Minecraft versions.
     pub required: [usize; 3],
     pub configurations: Vec<ConfigurationCoverage>,
     pub problems: Vec<Problem>,
@@ -95,6 +97,19 @@ impl Dataset {
                 ));
             }
         }
+        let mut scoped = HashSet::new();
+        for s in &catalog.scoped {
+            if !ids.contains(s.id.as_str()) {
+                problems.push(problem(
+                    None,
+                    None,
+                    Some(&s.id),
+                    "version scope for an identifier that is not in the catalog",
+                ));
+            } else if !scoped.insert(s.id.as_str()) {
+                problems.push(problem(None, None, Some(&s.id), "several version scopes"));
+            }
+        }
         let mut profile_ids = HashSet::new();
         for p in &self.profiles {
             if !profile_ids.insert(p.profile_id.as_str()) {
@@ -144,6 +159,7 @@ impl Dataset {
             );
             let (mut classes, mut fields, mut methods) = (0, 0, 0);
             let mut complete = true;
+            let here = |id: &str| catalog.exists_in(id, &c.minecraft_version);
             match self.select(&c.minecraft_version, c.launcher, c.loader) {
                 Ok(selection) => {
                     let mut record =
@@ -161,13 +177,13 @@ impl Dataset {
                                 }
                             }
                         };
-                    for id in &catalog.classes {
+                    for id in catalog.classes.iter().filter(|i| here(i.as_str())) {
                         record(selection.class(id).map(drop), id.as_str(), &mut classes);
                     }
-                    for id in &catalog.fields {
+                    for id in catalog.fields.iter().filter(|i| here(i.as_str())) {
                         record(selection.field(id).map(drop), id.as_str(), &mut fields);
                     }
-                    for id in &catalog.methods {
+                    for id in catalog.methods.iter().filter(|i| here(i.as_str())) {
                         record(selection.method(id).map(drop), id.as_str(), &mut methods);
                     }
                 }
@@ -213,7 +229,33 @@ impl Dataset {
         let mut push = |symbol: Option<&str>, message: String| {
             problems.push(problem(None, pid, symbol, message))
         };
-        // Exactly one record per catalog identifier of each kind, and no other.
+        // Minecraft versions of the configurations that use this profile.
+        let versions: Vec<&str> = self
+            .configurations
+            .iter()
+            .filter(|c| c.profile_id == p.profile_id)
+            .map(|c| c.minecraft_version.as_str())
+            .collect();
+        for s in &self.catalog.scoped {
+            let users = versions
+                .iter()
+                .filter(|v| s.minecraft_versions.iter().any(|x| x == *v))
+                .count();
+            if users != 0 && users != versions.len() {
+                push(
+                    Some(&s.id),
+                    "profile is shared by Minecraft versions where this symbol does not always exist"
+                        .into(),
+                );
+            }
+        }
+        // An unused profile is checked against the whole catalog.
+        let wanted = |id: &&str| {
+            versions
+                .first()
+                .is_none_or(|v| self.catalog.exists_in(id, v))
+        };
+        // Exactly one record per catalog identifier of this version and kind, and no other.
         let mut check_ids = |kind: &str, catalog: Vec<&str>, records: Vec<&str>| {
             let wanted: HashSet<&str> = catalog.iter().copied().collect();
             let mut seen = HashSet::new();
@@ -232,17 +274,32 @@ impl Dataset {
         };
         check_ids(
             "class",
-            self.catalog.classes.iter().map(|i| i.as_str()).collect(),
+            self.catalog
+                .classes
+                .iter()
+                .map(|i| i.as_str())
+                .filter(wanted)
+                .collect(),
             p.classes.iter().map(|r| r.id.as_str()).collect(),
         );
         check_ids(
             "field",
-            self.catalog.fields.iter().map(|i| i.as_str()).collect(),
+            self.catalog
+                .fields
+                .iter()
+                .map(|i| i.as_str())
+                .filter(wanted)
+                .collect(),
             p.fields.iter().map(|r| r.id.as_str()).collect(),
         );
         check_ids(
             "method",
-            self.catalog.methods.iter().map(|i| i.as_str()).collect(),
+            self.catalog
+                .methods
+                .iter()
+                .map(|i| i.as_str())
+                .filter(wanted)
+                .collect(),
             p.methods.iter().map(|r| r.id.as_str()).collect(),
         );
         let runtime: HashMap<&ClassId, &str> = p
