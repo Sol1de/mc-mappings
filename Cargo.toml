@@ -3,6 +3,13 @@ name = "mc-mappings"
 version = "0.1.0"
 edition = "2024"
 description = "Minecraft runtime mapping table model and JSON format"
+license = "MIT"
+repository = "https://github.com/Sol1de/mc-mappings"
+documentation = "https://docs.rs/mc-mappings"
+readme = "README.md"
+keywords = ["minecraft", "mappings", "jvm", "obfuscation"]
+categories = ["game-development", "data-structures"]
+include = ["/src/**", "/data/**", "/spec/**", "/Cargo.toml", "/Cargo.lock", "/README.md", "/LICENSE"]
 
 [dependencies]
 serde = { version = "1", features = ["derive"] }
