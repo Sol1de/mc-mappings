@@ -8,6 +8,7 @@
 - [Resolution model and identifiers](model.md).
 - [Table format](table-format.md).
 - [Minecraft v1 symbol catalog](catalog.md).
+- [Validation and releases](release.md).
 
 Implementation and validation progress is tracked in tickets and issues. These documents define the intended coverage without duplicating progress tracking.
 

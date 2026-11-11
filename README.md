@@ -59,7 +59,9 @@ cargo run --example audit          # JSON audit report of the bundled tables; ex
 ```
 
 CI (`.github/workflows/ci.yml`) runs fmt, clippy `-D warnings`, debug and release tests, the audit
-and `cargo package`.
+and `cargo package`, plus the release automation tests. Pushes to `main` publish new versions to
+crates.io and tag them; publication is switched off (`publish = false`) until the licence and the
+token are ready: [spec/release.md](spec/release.md).
 
 ## Adding a version or a configuration
 
