@@ -17,8 +17,10 @@ assert_eq!((m.runtime_name, m.descriptor.as_str(), m.is_static), ("method_1551",
 
 ## Coverage
 
-`data/minecraft-v1.json` (`schema_version` 1, `data_version` 1) covers the
-[catalog](spec/catalog.md) (19 classes, 13 fields, 36 methods) on every target configuration:
+`data/minecraft-v1.json` (`schema_version` 2, `data_version` 2) covers the
+[catalog](spec/catalog.md) on every target configuration: 77 classes, 89 fields and 175 methods in
+1.21, 79 classes, 89 fields and 177 methods in 1.21.11 (some packet symbols exist in one version
+only).
 
 | Minecraft | Launcher | Loader | Runtime names (verified) |
 | --- | --- | --- | --- |
@@ -28,7 +30,7 @@ assert_eq!((m.runtime_name, m.descriptor.as_str(), m.is_static), ("method_1551",
 | 1.21, 1.21.11 | lunar | none | Mojang (not the Vanilla names) |
 | 1.21, 1.21.11 | lunar | fabric | Intermediary |
 
-Configurations whose tables were verified identical share a profile (5 profiles for 10
+Configurations whose tables were verified identical share a profile (6 profiles for 10
 configurations); their identities stay separate. Any other version (`1.21.1`, snapshots, release
 candidates), and Lunar/Forge, is an unsupported configuration. `1.21.0` is the only alias.
 Provenance, reference builds and licences: [data/README.md](data/README.md),
@@ -46,7 +48,8 @@ Provenance, reference builds and licences: [data/README.md](data/README.md),
 - `Dataset::select(version, launcher, loader)` returns a `Selection`; `class`, `field`, `method`
   and `descriptor` resolve through it. Errors (`ResolveError`):
   `UnsupportedConfiguration` (no exact registry entry, never a fallback), `UnknownSymbol` (not in
-  the catalog), `InvalidData` (duplicate entry, missing profile, symbol, owner or type).
+  the catalog), `AbsentInVersion` (in the catalog, but the game does not have it in the selected
+  Minecraft version), `InvalidData` (duplicate entry, missing profile, symbol, owner or type).
 
 ## Checks
 
