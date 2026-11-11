@@ -17,5 +17,5 @@ upstream inputs (URLs, SHA-256, licences, loader builds, Lunar class-cache hashe
 the runtime namespace. Observed runtime namespaces: standard Vanilla `official` (obfuscated),
 standard and Lunar Fabric `intermediary`, standard Forge and Lunar without loader `mojang`.
 
-Runtime names come from Mojang mappings (no redistribution by the generator) and Intermediary
-(CC0): check the licence column of the provenance before publishing this file.
+Runtime names come from Mojang mappings, Intermediary (CC0) and the Lunar class cache; they are
+distributed as-is under the notice in the [README](../README.md#licence).

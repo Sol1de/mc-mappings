@@ -51,27 +51,21 @@ Pull requests, other branches, forks and manual dispatches only validate. It is 
 To retry, rerun the failed jobs of the original push run: an uploaded version is skipped and a
 missing tag is recovered. A failed publication creates no tag.
 
-## Before the first publication
+## Licence, credentials and switch
 
-`publish = false` stays in `Cargo.toml` until all of these are done:
+The crate is MIT-licensed (`LICENSE`). The runtime names bundled in `data/` are published as-is,
+with the notice in the [README](../README.md#licence) (sources and their terms per configuration
+in `data/minecraft-v1.provenance.json`).
 
-1. Choose the licence: add `license` (SPDX expression) to `Cargo.toml` and the licence file.
-   crates.io refuses a crate without one.
-2. Decide on the redistribution of the runtime names bundled in `data/` (Mojang- and
-   Lunar-derived; see the licence column of `data/minecraft-v1.provenance.json` and
-   [references](references.md)).
-3. On crates.io, sign in with GitHub, verify the account e-mail, then create an API token
-   (Account Settings → API Tokens) with the `publish-new` and `publish-update` scopes, limited to
-   the crate `mc-mappings`, with an expiry date.
-4. On GitHub, `Sol1de/mc-mappings` → Settings → Secrets and variables → Actions → New repository
-   secret `CARGO_REGISTRY_TOKEN` with that token. Under Settings → Actions → General, keep
-   workflow permissions able to create tags (the job requests `contents: write`), and make sure no
-   tag ruleset blocks GitHub Actions from creating `v*` tags.
-5. Remove `publish = false` and merge to `main`: that push publishes `mc-mappings` and tags it.
+The workflow uses a crates.io API token stored as the repository Actions secret
+`CARGO_REGISTRY_TOKEN`. The first publication needs the `publish-new` scope; afterwards replace the
+token with one restricted to `publish-update` for `mc-mappings`, and renew it before it expires.
+Never commit or log the token. Tags are created with the built-in `GITHUB_TOKEN`: no tag ruleset
+may block GitHub Actions from creating `v*` tags. Protect `main` with required checks to control
+who can release.
 
-After the first publication, replace the token with one restricted to `publish-update` for
-`mc-mappings`, and renew it before it expires. Never commit or log the token. Protect `main` with
-required checks to control who can release.
+To pause publication, add `publish = false` to `[package]` in `Cargo.toml`: the publish job then
+succeeds without publishing or tagging. Remove it to resume.
 
 ## Preparing the next release
 

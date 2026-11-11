@@ -59,9 +59,9 @@ cargo run --example audit          # JSON audit report of the bundled tables; ex
 ```
 
 CI (`.github/workflows/ci.yml`) runs fmt, clippy `-D warnings`, debug and release tests, the audit
-and `cargo package`, plus the release automation tests. Pushes to `main` publish new versions to
-crates.io and tag them; publication is switched off (`publish = false`) until the licence and the
-token are ready: [spec/release.md](spec/release.md).
+and `cargo package`, plus the release automation tests. A push to `main` with a new
+`package.version` publishes it to crates.io and tags it `v<version>`:
+[spec/release.md](spec/release.md).
 
 ## Adding a version or a configuration
 
@@ -73,3 +73,15 @@ token are ready: [spec/release.md](spec/release.md).
 3. Extend the version check in `Dataset::validate`, the tests in `tests/minecraft_v1.rs` and the
    coverage table above. Keep every previously supported configuration and its tests.
 4. `cargo test` and the audit must pass before publishing.
+
+## Licence
+
+The code and the table format are under the [MIT licence](LICENSE).
+
+The tables in `data/` contain runtime names taken from third-party sources and are distributed
+as-is: the MIT licence does not cover those names, which remain subject to their owners' terms.
+They are derived from the Mojang client and mappings (© Mojang/Microsoft), Fabric Intermediary
+(CC0-1.0) and the Lunar Client class cache; Forge installers (LGPL-2.1-only) were only read to
+establish the Forge namespace. Per configuration, the sources and their terms are
+recorded in [`data/minecraft-v1.provenance.json`](data/minecraft-v1.provenance.json). This project
+is not affiliated with or endorsed by Mojang, Microsoft or Lunar Client.
