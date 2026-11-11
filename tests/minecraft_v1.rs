@@ -59,7 +59,75 @@ fn audit_passes_on_every_target_configuration() {
             })
             .unwrap_or_else(|| panic!("{v} {l:?} {o:?} missing"));
         assert!(c.complete);
-        assert_eq!([c.classes, c.fields, c.methods], report.required);
+        // Some packet symbols exist in one of the two versions only (spec/catalog.md).
+        let expected = if v == "1.21" {
+            [77, 89, 175]
+        } else {
+            [79, 89, 177]
+        };
+        assert_eq!([c.classes, c.fields, c.methods], expected);
+    }
+    assert_eq!(report.required, [79, 89, 185]);
+}
+
+#[test]
+fn version_dependent_symbols() {
+    let d = dataset();
+    // Same symbol, version-specific type.
+    let fall = "minecraft.entity.fall_distance";
+    assert!(field(&d, "1.21", Launcher::Lunar, Loader::None, fall).ends_with(".fallDistance:F"));
+    assert!(field(&d, "1.21.11", Launcher::Lunar, Loader::None, fall).ends_with(".fallDistance:D"));
+    let fov = "minecraft.game_renderer.get_fov";
+    let (older, _) = method(&d, "1.21", Launcher::Lunar, Loader::None, fov);
+    let (newer, _) = method(&d, "1.21.11", Launcher::Lunar, Loader::None, fov);
+    assert!(
+        older.ends_with("FZ)D") && newer.ends_with("FZ)F"),
+        "{older} {newer}"
+    );
+    // Packet content that exists in one version only.
+    let old: MethodId = "minecraft.set_entity_motion_packet.get_xa".parse().unwrap();
+    let new: MethodId = "minecraft.set_entity_motion_packet.get_movement"
+        .parse()
+        .unwrap();
+    for (v, l, o) in TARGETS {
+        let s = d.select(v, l, o).unwrap();
+        let (present, absent) = if v == "1.21" {
+            (&old, &new)
+        } else {
+            (&new, &old)
+        };
+        assert!(s.method(present).is_ok(), "{v} {l:?} {o:?}");
+        assert!(matches!(
+            s.method(absent),
+            Err(ResolveError::AbsentInVersion { .. })
+        ));
+    }
+    let older = d.select("1.21", Launcher::Standard, Loader::None).unwrap();
+    assert!(matches!(
+        older.class(&"minecraft.position_move_rotation".parse().unwrap()),
+        Err(ResolveError::AbsentInVersion { .. })
+    ));
+}
+
+#[test]
+fn catalog_page_lists_every_symbol() {
+    let doc = include_str!("../spec/catalog.md");
+    let d = dataset();
+    let row = |class: &str| {
+        doc.lines()
+            .find(|l| l.starts_with(&format!("| `{class}`")))
+            .unwrap_or_else(|| panic!("spec/catalog.md has no row for {class}"))
+    };
+    for class in &d.catalog.classes {
+        row(class.as_str());
+    }
+    let fields = d.catalog.fields.iter().map(|i| i.as_str());
+    for id in fields.chain(d.catalog.methods.iter().map(|i| i.as_str())) {
+        let (class, name) = id.rsplit_once('.').unwrap();
+        assert!(
+            row(class).contains(&format!("`{name}`")),
+            "{id} is missing from spec/catalog.md"
+        );
     }
 }
 
