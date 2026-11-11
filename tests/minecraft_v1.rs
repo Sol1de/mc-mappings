@@ -84,29 +84,36 @@ fn version_dependent_symbols() {
         older.ends_with("FZ)D") && newer.ends_with("FZ)F"),
         "{older} {newer}"
     );
-    // Packet content that exists in one version only.
-    let old: MethodId = "minecraft.set_entity_motion_packet.get_xa".parse().unwrap();
-    let new: MethodId = "minecraft.set_entity_motion_packet.get_movement"
-        .parse()
-        .unwrap();
-    for (v, l, o) in TARGETS {
-        let s = d.select(v, l, o).unwrap();
-        let (present, absent) = if v == "1.21" {
-            (&old, &new)
-        } else {
-            (&new, &old)
-        };
-        assert!(s.method(present).is_ok(), "{v} {l:?} {o:?}");
-        assert!(matches!(
-            s.method(absent),
-            Err(ResolveError::AbsentInVersion { .. })
-        ));
+    // Packet content that exists in one version only: every such symbol resolves on the
+    // configurations of its version and is reported absent on the others.
+    let (mut old, mut new) = (0, 0);
+    for scope in &d.catalog.scoped {
+        let id = scope.id.as_str();
+        match scope.minecraft_versions.as_slice() {
+            [v] if v == "1.21" => old += 1,
+            [v] if v == "1.21.11" => new += 1,
+            other => panic!("{id}: unexpected scope {other:?}"),
+        }
+        for (v, l, o) in TARGETS {
+            let s = d.select(v, l, o).unwrap();
+            let result = if let Some(c) = d.catalog.classes.iter().find(|c| c.as_str() == id) {
+                s.class(c).map(drop)
+            } else if let Some(f) = d.catalog.fields.iter().find(|f| f.as_str() == id) {
+                s.field(f).map(drop)
+            } else {
+                s.method(&id.parse().unwrap()).map(drop)
+            };
+            if scope.minecraft_versions.iter().any(|x| x == v) {
+                assert_eq!(result, Ok(()), "{id} in {v} {l:?} {o:?}");
+            } else {
+                assert!(
+                    matches!(result, Err(ResolveError::AbsentInVersion { .. })),
+                    "{id} in {v} {l:?} {o:?}: {result:?}"
+                );
+            }
+        }
     }
-    let older = d.select("1.21", Launcher::Standard, Loader::None).unwrap();
-    assert!(matches!(
-        older.class(&"minecraft.position_move_rotation".parse().unwrap()),
-        Err(ResolveError::AbsentInVersion { .. })
-    ));
+    assert_eq!((old, new), (8, 12), "8 methods; 2 classes and 10 methods");
 }
 
 #[test]
